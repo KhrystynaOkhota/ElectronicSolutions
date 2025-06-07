@@ -1,0 +1,210 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.s-hero {
+  position: relative;
+  height: auto;
+  min-height: 70vh;
+  @media (max-width: $breakpoint-lg) {
+    height: auto;
+  }
+
+  & .decor-line {
+    margin: 59px auto 48px auto;
+    @media (max-width: $breakpoint-md) {
+      margin: 17px auto;
+      height: 50px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(217, 217, 217, 1);
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+    }
+  }
+
+  &__content {
+    padding-top: 242px;
+    padding-bottom: 220px;
+    @media (max-width: $breakpoint-lg) {
+
+      padding: 145px 0;
+    }
+
+    & .heading {
+      margin-bottom: 30px;
+    }
+
+    & .description {
+      font-size: 35px;
+      margin-bottom: 41px;
+      max-width: 460px;
+      @media (max-width: $breakpoint-md) {
+        font-size: 25px;
+      }
+    }
+
+    & .heading, & .description {
+      color: $white-color;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 20px;
+      }
+    }
+
+  }
+}
+
+.s-why-us {
+  margin-bottom: 93px;
+  border-bottom: 1px solid #E3E3E3;
+
+  & .card {
+    padding: 20px;
+
+    background: #fff;
+
+    &:nth-child(2), &:nth-child(4) {
+      @media (min-width: $breakpoint-md) {
+        position: relative;
+        top: 52px;
+      }
+    }
+
+    &__wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    &__number {
+      font-size: 40px;
+      margin-bottom: 2px;
+      color: #44693D;
+      width: 100%;
+      @media (max-width: $breakpoint-md) {
+        margin-right: 38px;
+        width: auto;
+      }
+    }
+
+    &__title {
+      margin-bottom: 7px;
+    }
+
+    &__description {
+
+    }
+  }
+
+  &__content {
+    padding: 58px 0 110px 0;
+  }
+
+  & .img {
+    height: 100%;
+    object-fit: cover;
+
+    &__wrap {
+      height: 100%;
+      position: relative;
+
+      @media (min-width: 1405px) {
+        padding-right: 30px;
+        width: auto;
+        margin-left: calc(-1 * (100vw - 1290px) / 2);
+      }
+    }
+  }
+}
+
+.s-recommended-news {
+  padding: 92px 0;
+  @media (max-width: $breakpoint-xl) {
+
+    padding: 43px 0 50px 0;
+    & .heading {
+      text-align: center;
+    }
+
+  }
+
+}
+
+.s-client {
+  padding: 86px 0 108px 0;
+  @media (max-width: $breakpoint-lg) {
+    padding: 40px 0 50px 0;
+  }
+
+  & .heading {
+    margin-bottom: 40px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  & .swiper {
+    &-container {
+      width: calc(100% + 30px);
+      padding: 0 15px;
+      left: -15px;
+    }
+
+    &-controls {
+      margin-top: 20px;
+      @media (max-width: $breakpoint-lg) {
+        margin-top: 10px;
+      }
+    }
+
+    &-pagination {
+      margin-top: 50px;
+    }
+  }
+
+  & .client__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-wrap {
+
+      padding-bottom: 45%;
+      border-radius: 10px;
+      border: 1px solid #EEEEEE;
+      background: $white-color;
+    }
+  }
+}
+
+.s-popular-resort {
+  padding-bottom: 100px;
+  @media (max-width: $breakpoint-xl) {
+    padding-bottom: 50px;
+    padding-top: 43px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    & .heading {
+      text-align: center;
+    }
+  }
+}
+
+.s-recommended-prom {
+  & .btn-transparent {
+    margin-top: 50px;
+  }
+}
+

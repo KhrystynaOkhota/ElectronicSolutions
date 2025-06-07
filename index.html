@@ -137,13 +137,16 @@
         </div>
         <div class="container overlap">
             <div class="s-hero__content  text-left">
-                <div class="title h1 heading heading-font text-bold">
+                <div class="heading h1 heading-font text-bold">
                     Зелена енергетика в кожний дім та підприемство
                 </div>
 
-                <div class="description text-bold">Зробимо незалежних українців більш незалежними!</div>
+                <div class="description text-light">Зробимо незалежних українців більш незалежними!</div>
 
-                <a href="" class="btn-primary">Замовити консультацію</a>
+
+                <a href="blog.html" class="btn btn-primary d-flex open-popup"
+                   data-rel="consultation">Замовити консультацію<span
+                        class="d-flex align-middle align-center"><i class="icon-arrow-top"></i> </span></a>
             </div>
         </div>
     </section>
@@ -163,8 +166,8 @@
                             <div class="benefit__icon-wrap d-flex align-middle align-center">
                                 <img src="assets/img/ad-1.svg" alt="" class="benefit__icon">
                             </div>
-                            <div class="benefit__title">Знизити витрати на оплату</div>
-                            <div class="benefit__text text-regular text-center">
+                            <div class="benefit__title text-semibold text-s">Знизити витрати на оплату</div>
+                            <div class="benefit__text text-regular text-s">
                                 Найкращі пропозиції
                             </div>
                         </div>
@@ -173,8 +176,8 @@
                             <div class="benefit__icon-wrap d-flex align-middle align-center">
                                 <img src="assets/img/ad-2.svg" alt="" class="benefit__icon">
                             </div>
-                            <div class="benefit__title">Знизити витрати на оплату</div>
-                            <div class="benefit__text text-regular text-center">
+                            <div class="benefit__title text-semibold text-s">Знизити витрати на оплату</div>
+                            <div class="benefit__text text-regular text-s">
                                 Найкращі пропозиції
                             </div>
                         </div>
@@ -183,8 +186,8 @@
                             <div class="benefit__icon-wrap d-flex align-middle align-center">
                                 <img src="assets/img/ad-3.svg" alt="" class="benefit__icon">
                             </div>
-                            <div class="benefit__title">Знизити витрати на оплату</div>
-                            <div class="benefit__text text-regular text-center">
+                            <div class="benefit__title text-semibold text-s">Знизити витрати на оплату</div>
+                            <div class="benefit__text text-regular text-s">
                                 Найкращі пропозиції
                             </div>
                         </div>
@@ -213,7 +216,7 @@
                                     <div class="card__number heading-font">
                                         01
                                     </div>
-                                    <div class="card__title text-s">
+                                    <div class="card__title text-semibold text-s">
                                         Експертиза та інновації
                                     </div>
                                 </div>
@@ -229,7 +232,7 @@
                                     <div class="card__number heading-font">
                                         02
                                     </div>
-                                    <div class="card__title text-s">
+                                    <div class="card__title text-semibold text-s">
                                         Повний цикл послуг
                                     </div>
                                 </div>
@@ -242,7 +245,7 @@
                                     <div class="card__number heading-font">
                                         03
                                     </div>
-                                    <div class="card__title text-s">
+                                    <div class="card__title text-semibold text-s">
                                         Надійність та якість
                                     </div>
                                 </div>
@@ -255,7 +258,7 @@
                                     <div class="card__number heading-font">
                                         04
                                     </div>
-                                    <div class="card__title text-s">
+                                    <div class="card__title text-semibold text-s">
                                         Клієнтська підтримка
                                     </div>
                                 </div>
@@ -282,39 +285,154 @@
                 <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16">
                     <div class="tab">
                         <div class="tab__list">
-                            <div class="tab__item">Послуги для організацій</div>
-                            <div class="tab__item">Послуги для дому</div>
-
-
+                            <div class="tab__item text-semibold text-s">Послуги для організацій</div>
+                            <div class="tab__item text-semibold text-s">Послуги для дому</div>
                         </div>
                         <div class="tab__content">
                             <div class="tab__content-item">
                                 <div class="service">
-                                    <div class="service__icon-wrap">
-                                        <img class="img" src="assets/img/ad-1.svg" alt="image">
-                                    </div>
-                                    <div class="d-flex align-left align-middle">
-                                        <div class="service__icon-wrap">
-                                            <img class="img" src="assets/img/ad-1.svg" alt="image">
-                                        </div>
-                                        <div class="service__title text-s">
-                                            Проєктно-монтажні роботи під ключ
-                                        </div>
+                                    <div class="service__img-wrap d-none d-md-block">
+                                        <img class="service__img" src="assets/img/ad-1.svg" alt="image">
                                     </div>
 
-                                    <div class="service__description text-s">
-                                        Фінансова підтримка для бізнесу, який планує встановити сонячну електростанцію.
-                                        Програма 5-7-9 дозволяє отримати кредит до 5 млн грн з пільговими відсотковими
-                                        ставками 5%, 7% або 9% на строк до 5 років, що сприяє зниженню витрат на
-                                        енергоресурси.
+                                    <div class="">
+                                        <div class="d-flex align-left align-middle">
+                                            <div class="service__img-wrap d-block d-md-none">
+                                                <img class="service__img" src="assets/img/ad-1.svg" alt="image">
+                                            </div>
+                                            <div class="service__title text-semibold text-s">
+                                                Проєктно-монтажні роботи під ключ
+                                            </div>
+                                        </div>
+                                        <div class="service__description text-s">
+                                            Фінансова підтримка для бізнесу, який планує встановити сонячну
+                                            електростанцію.
+                                            Програма 5-7-9 дозволяє отримати кредит до 5 млн грн з пільговими
+                                            відсотковими
+                                            ставками 5%, 7% або 9% на строк до 5 років, що сприяє зниженню витрат на
+                                            енергоресурси.
+                                        </div>
                                     </div>
+                                    <a href="about.html" class="btn btn-primary">Докладніше <span><i
+                                            class="icon-arrow-top"></i></span></a>
+                                </div>
+                                <div class="service">
+                                    <div class="service__img-wrap d-none d-md-block">
+                                        <img class="service__img" src="assets/img/ad-1.svg" alt="image">
+                                    </div>
+
+                                    <div class="">
+                                        <div class="d-flex align-left align-middle">
+                                            <div class="service__img-wrap d-block d-md-none">
+                                                <img class="service__img" src="assets/img/ad-1.svg" alt="image">
+                                            </div>
+                                            <div class="service__title text-semibold text-s">
+                                                Проєктно-монтажні роботи під ключ
+                                            </div>
+                                        </div>
+                                        <div class="service__description text-s">
+                                            Фінансова підтримка для бізнесу, який планує встановити сонячну
+                                            електростанцію.
+                                            Програма 5-7-9 дозволяє отримати кредит до 5 млн грн з пільговими
+                                            відсотковими
+                                            ставками 5%, 7% або 9% на строк до 5 років, що сприяє зниженню витрат на
+                                            енергоресурси.
+                                        </div>
+                                    </div>
+                                    <a href="about.html" class="btn btn-primary">Докладніше <span><i
+                                            class="icon-arrow-top"></i></span></a>
+                                </div>
+                                <div class="service">
+                                    <div class="service__img-wrap d-none d-md-block">
+                                        <img class="service__img" src="assets/img/ad-1.svg" alt="image">
+                                    </div>
+
+                                    <div class="">
+                                        <div class="d-flex align-left align-middle">
+                                            <div class="service__img-wrap d-block d-md-none">
+                                                <img class="service__img" src="assets/img/ad-1.svg" alt="image">
+                                            </div>
+                                            <div class="service__title text-semibold text-s">
+                                                Проєктно-монтажні роботи під ключ
+                                            </div>
+                                        </div>
+                                        <div class="service__description text-s">
+                                            Фінансова підтримка для бізнесу, який планує встановити сонячну
+                                            електростанцію.
+                                            Програма 5-7-9 дозволяє отримати кредит до 5 млн грн з пільговими
+                                            відсотковими
+                                            ставками 5%, 7% або 9% на строк до 5 років, що сприяє зниженню витрат на
+                                            енергоресурси.
+                                        </div>
+                                    </div>
+                                    <a href="about.html" class="btn btn-primary ">Докладніше <span><i
+                                            class="icon-arrow-top"></i></span></a>
                                 </div>
                             </div>
                             <div class="tab__content-item">
-                                tab2
+                                <div class="service">
+                                    <div class="service__img-wrap d-none d-md-block">
+                                        <img class="service__img" src="assets/img/ad-1.svg" alt="image">
+                                    </div>
+
+                                    <div class="">
+                                        <div class="d-flex align-left align-middle">
+                                            <div class="service__img-wrap d-block d-md-none">
+                                                <img class="service__img" src="assets/img/ad-1.svg" alt="image">
+                                            </div>
+                                            <div class="service__title text-s">
+                                                Проєктно-монтажні роботи під ключ
+                                            </div>
+                                        </div>
+                                        <div class="service__description text-semibold text-s">
+                                            Фінансова підтримка для бізнесу, який планує встановити сонячну
+                                            електростанцію.
+                                            Програма 5-7-9 дозволяє отримати кредит до 5 млн грн з пільговими
+                                            відсотковими
+                                            ставками 5%, 7% або 9% на строк до 5 років, що сприяє зниженню витрат на
+                                            енергоресурси.
+                                        </div>
+                                    </div>
+                                    <a href="about.html" class="btn btn-primary">Докладніше <span><i
+                                            class="icon-arrow-top"></i></span></a>
+                                </div>
+                                <div class="service">
+                                    <div class="service__img-wrap d-none d-md-block">
+                                        <img class="service__img" src="assets/img/ad-1.svg" alt="image">
+                                    </div>
+
+                                    <div class="">
+                                        <div class="d-flex align-left align-middle">
+                                            <div class="service__img-wrap d-block d-md-none">
+                                                <img class="service__img" src="assets/img/ad-1.svg" alt="image">
+                                            </div>
+                                            <div class="service__title text-s">
+                                                Проєктно-монтажні роботи під ключ
+                                            </div>
+                                        </div>
+                                        <div class="service__description text-s">
+                                            Фінансова підтримка для бізнесу, який планує встановити сонячну
+                                            електростанцію.
+                                            Програма 5-7-9 дозволяє отримати кредит до 5 млн грн з пільговими
+                                            відсотковими
+                                            ставками 5%, 7% або 9% на строк до 5 років, що сприяє зниженню витрат на
+                                            енергоресурси.
+                                        </div>
+                                    </div>
+                                    <a href="about.html" class="btn btn-primary">Докладніше <span><i
+                                            class="icon-arrow-top"></i></span></a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 d-flex align-center">
+                    <a href="blog.html" class="btn btn-primary btn-more">Всі послуги <span
+                            class="d-flex align-middle align-center"><i class="icon-arrow-top"></i> </span></a>
                 </div>
             </div>
         </div>
@@ -349,7 +467,8 @@
                                 санаторіях має приносити користь для тіла.
                             </p>
                         </div>
-                        <a href="about.html" class="btn btn-primary">Докладніше <span><i class="icon-arrow-top"></i></span></a>
+                        <a href="about.html" class="btn btn-primary">Докладніше <span><i
+                                class="icon-arrow-top"></i></span></a>
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-7 col-md-7 col-sm-16 col-xs-16 column">
@@ -371,7 +490,9 @@
             <div class="row m-row">
                 <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column text-center">
                     <h3 class="heading heading-font text-regular ">Замовити БЕЗКОШТОВНУ консультацію</h3>
-                    <div class="description text-light heading-font">Залиште ваш номер телефону, ми подзвонимо у найближчий час</div>
+                    <div class="description text-light heading-font">Залиште ваш номер телефону, ми подзвонимо у
+                        найближчий час
+                    </div>
                 </div>
             </div>
 
@@ -532,9 +653,10 @@
     <section class="s-recommended-news  swiper-entry">
         <div class="container">
             <div class="row">
-                <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 d-flex align-middle align-justify">
+                <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 d-flex align-middle align-justify mb-32">
                     <h3 class="heading heading-font text-regular h2">Останні новини</h3>
-                    <a href="blog.html" class="btn btn-primary d-none d-md-flex align-middle">Всі новини <span class="d-flex align-middle align-center"><i class="icon-arrow-top"></i> </span></a>
+                    <a href="blog.html" class="btn btn-primary d-none d-md-flex align-middle">Всі новини <span
+                            class="d-flex align-middle align-center"><i class="icon-arrow-top"></i> </span></a>
                 </div>
             </div>
             <div class="row m-row ">
@@ -559,7 +681,7 @@
                                     <div class="event__info">
                                         <div class="event__date">12.02.2025</div>
 
-                                        <div class="event__title  text-bold">
+                                        <div class="event__title  text-medium">
                                             Сонячна енергетика в Україні: виклики та перспективи
                                         </div>
 
@@ -575,7 +697,7 @@
                                     <div class="event__info">
                                         <div class="event__date">12.02.2025</div>
 
-                                        <div class="event__title  text-bold">
+                                        <div class="event__title  text-medium">
                                             Сонячна енергетика в Україні: виклики та перспективи
                                         </div>
 
@@ -591,7 +713,7 @@
                                     <div class="event__info">
                                         <div class="event__date">12.02.2025</div>
 
-                                        <div class="event__title  text-bold">
+                                        <div class="event__title  text-medium">
                                             Сонячна енергетика в Україні: виклики та перспективи
                                         </div>
 
@@ -607,7 +729,7 @@
                                     <div class="event__info">
                                         <div class="event__date">12.02.2025</div>
 
-                                        <div class="event__title  text-bold">
+                                        <div class="event__title  text-medium">
                                             Сонячна енергетика в Україні: виклики та перспективи
                                         </div>
 
@@ -623,7 +745,7 @@
                                     <div class="event__info">
                                         <div class="event__date">12.02.2025</div>
 
-                                        <div class="event__title  text-bold">
+                                        <div class="event__title  text-medium">
                                             Сонячна енергетика в Україні: виклики та перспективи
                                         </div>
 
@@ -639,7 +761,7 @@
                                     <div class="event__info">
                                         <div class="event__date">12.02.2025</div>
 
-                                        <div class="event__title  text-bold">
+                                        <div class="event__title  text-medium">
                                             Сонячна енергетика в Україні: виклики та перспективи
                                         </div>
 
@@ -661,7 +783,8 @@
             </div>
             <div class="row">
                 <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 d-flex align-center">
-                    <a href="blog.html" class="btn btn-primary d-flex d-md-none align-middle">Всі новини <span class="d-flex align-middle align-center"><i class="icon-arrow-top"></i> </span></a>
+                    <a href="blog.html" class="btn btn-primary d-flex d-md-none align-middle">Всі новини <span
+                            class="d-flex align-middle align-center"><i class="icon-arrow-top"></i> </span></a>
                 </div>
             </div>
         </div>
@@ -681,24 +804,24 @@
                                 <i class="icon-phone"></i>
 
                                 <div>
-                                    <div class="contact__title">Відділ продаж:</div>
-                                    <a href="tel: +380731575727" class="contact__text d-flex align-middle"> +38 (073)
+                                    <div class="contact__title text-s text-medium">Відділ продаж:</div>
+                                    <a href="tel: +380731575727" class="contact__text text-s  d-flex align-middle"> +38 (073)
                                         157-57-27</a>
                                 </div>
                             </li>
                             <li class="contact__item d-flex align-middle align-left">
                                 <i class="icon-message"></i>
                                 <div>
-                                    <div class="contact__title"> E-mail:</div>
-                                    <a href="mailto:tov.elsol@gmail.com" class="contact__text d-flex align-middle">tov.elsol@gmail.com</a>
+                                    <div class="contact__title text-medium text-s "> E-mail:</div>
+                                    <a href="mailto:tov.elsol@gmail.com" class="contact__text text-s d-flex align-middle">tov.elsol@gmail.com</a>
                                 </div>
 
                             </li>
                             <li class="contact__item d-flex align-middle align-left">
                                 <i class="icon-pin"></i>
                                 <div>
-                                    <div class="contact__title">Адреса:</div>
-                                    <a href="" class="contact__text d-flex align-middle"> 49000, Україна,
+                                    <div class="contact__title text-s text-medium">Адреса:</div>
+                                    <a href="" class="contact__text text-s d-flex align-middle"> 49000, Україна,
                                         Дніпро,Енергетична, 9А</a>
                                 </div>
 
@@ -843,14 +966,15 @@
 <div class="popup-wrapper">
     <div class="bg-layer"></div>
 
-    <div class="popup-content" data-rel="cta">
+    <div class="popup-content" data-rel="consultation">
         <div class="layer-close"></div>
         <div class="popup-container size-1">
             <div class="btn-close d-flex align-middle align-center"><i class="icon-close"></i>
             </div>
 
             <div class="popup-form text-center">
-                <h4 class="popup-form__heading heading-font text-bold">3воротній дзвінок</h4>
+                <h4 class="popup-form__heading heading-font text-bold">Замовити дзвінок консультацію</h4>
+                <h4 class="popup-form__description heading-font text-bold">Залиште ваш номер телефону, ми подзвонимо у найближчий час</h4>
                 <form>
                     <div class="row m-row">
                         <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
@@ -867,6 +991,15 @@
                                        title="">
                             </div>
                         </div>
+
+
+                        <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
+                            <div class="form-control">
+                                    <textarea rows="5" class="form-control__textarea" name="message"
+                                              placeholder="Текст коментаря"></textarea>
+                            </div>
+                        </div>
+
                         <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
                             <input type="submit" value="Відправити" class="btn btn-primary">
                         </div>
