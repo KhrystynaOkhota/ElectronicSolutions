@@ -6,19 +6,6 @@
     margin-top: 80px;
   }
 
-  & .decor-bg {
-    width: 100%;
-    max-width: 402px;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    @media (max-width: $breakpoint-md) {
-      max-width: 286px;
-      right: -15px;
-      transform: none;
-    }
-  }
 
   &__content {
     padding-left: 20px;
@@ -87,7 +74,7 @@
 
 .s-error, .s-thanks {
   position: relative;
-  height: 100vh;
+  height: auto;
 
   & .logo__wrap {
     object-fit: contain;
@@ -100,17 +87,6 @@
   }
 
   & .content {
-    position: absolute;
-    z-index: 3;
-    bottom: 20%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    @media (max-width: $breakpoint-md) {
-      width: 100%;
-    }
-
     & .heading, & .description {
       color: $white-color;
     }
@@ -162,23 +138,33 @@
 }
 
 .s-error {
-  padding-top: 44px;
+  padding-top: 5%;
+
+  &__inner {
+    margin-top: 6%;
+  }
 
   & .logo__wrap {
-    width: 255px;
+    width: 332px;
     height: 100px;
 
   }
 
   & .content {
-    & .heading, .description, .btn-primary {
-      z-index: 9;
-      position: relative;
+    & .number {
+      @include fontSize(180, 250);
+      line-height: 1;
+      margin-bottom: 50px;
+      color: $accent-color;
+    }
+
+    & .heading, .description {
+      color: #111A17;
     }
 
     & .heading {
-      @include fontSize(45, 70);
-      margin-bottom: 30px;
+      @include fontSize(35, 50);
+      margin-bottom: 35px;
       @media (max-width: $breakpoint-md) {
         margin-bottom: 15px;
       }
@@ -186,7 +172,7 @@
     }
 
     & .description {
-      @include fontSize(20, 30);
+      @include fontSize(25, 30);
       margin-bottom: 45px;
       @media (max-width: $breakpoint-md) {
         margin-bottom: 20px;
@@ -212,7 +198,8 @@
     left: 0;
     height: 100%;
     width: 100%;
-object-fit: cover;
+    object-fit: cover;
+
     &:nth-child(1) {
       z-index: 1;
     }
