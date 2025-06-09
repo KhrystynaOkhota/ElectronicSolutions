@@ -24,7 +24,7 @@
   }
 
   &.transparent {
-  //  background: transparent;
+    //  background: transparent;
 
 
     &.scrolled {
@@ -376,6 +376,10 @@
     }
   }
 
+
+  & .btn-transparent {
+    border-color: $white-color;
+  }
 }
 
 

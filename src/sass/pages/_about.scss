@@ -40,17 +40,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-
-
-    @media (max-width: $breakpoint-lg) {
-      grid-template-columns: repeat(4, 1fr);
-    }
     @media (max-width: $breakpoint-md) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px 16px;
-    }
-    @media (max-width: $breakpoint-sm) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
     }
   }
 
@@ -67,6 +59,11 @@
     border: 3px solid #fff;
     margin-top: 41px;
     padding: 0 19px 19px 19px;
+
+    @media (max-width: $breakpoint-md) {
+      width: 350px;
+      margin: 41px auto 0 auto;
+    }
   }
 
   &__icon {
@@ -108,14 +105,17 @@
 .s-benefit {
   padding: 98px 0 93px 0;
   @media (max-width: $breakpoint-md) {
-    padding: 50px 0 48px 0;
+    padding: 50px 0;
   }
 }
 
 .s-about {
   margin-bottom: 100px;
   border-top: 1px solid #E3E3E3;
-
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 50px;
+    border-top: 0;
+  }
   &.no-line {
     border: none;
   }
@@ -289,8 +289,8 @@
       border-radius: 100%;
       background: $white-color;
       position: absolute;
-      top:20px;
-      left:-40px;
+      top: 20px;
+      left: -40px;
     }
 
     &:not(&:last-child) {
