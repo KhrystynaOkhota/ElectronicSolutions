@@ -10,22 +10,55 @@
 
   font-size: 18px;
   line-height: 100%;
-  padding: 15px 32px;
+  //padding: 15px 32px;
   border: 1px solid $accent-color;
   text-align: center;
   display: inline-block;
   font-weight: 500;
   border-radius: 7px;
   @include transition(.3);
+  padding: 15px 54px 15px 10px;
+  min-width: 223px;
 
-  & span {
+  &__icon {
     width: 34px;
     height: 34px;
     border-radius: 100%;
+    background: $white-color;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    & i {
+      @include transition(.4);
+
+      font-size: 17px;
+      color: #44693D;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    font-family: 'FuturaPT', sans-serif;
+    font-weight: 400;
+  }
+
+  &:hover {
+    & .btn__icon {
+      & i {
+        transform: rotate(45deg);
+      }
+
+    }
   }
 
   &:focus {
     outline: none;
+  }
+
+  &.size-2 {
+    min-width: 263px;
   }
 
   &-primary {
@@ -46,19 +79,44 @@
       }
     }
 
-    &:hover {
-      border-color: #E0F8F5;
-      background: #E0F8F5;
-      color: $accent-color;
+
+  }
+
+  &-white {
+    background: $white-color;
+    border-color: $white-color;
+
+    & .btn {
+      &__icon {
+        background: $accent-color;
+
+        & i {
+          color: $white-color;
+        }
+      }
+
+      &__text {
+        color: $accent-color;
+      }
     }
   }
 
   &-transparent {
-    // border: 1px solid $accent-color;
-    color: $accent-color;
+    background: transparent;
+    border-color: $white-color;
 
-    &:hover {
+    & .btn {
+      &__icon {
+        background: $accent-color;
 
+        & i {
+          color: $white-color;
+        }
+      }
+
+      &__text {
+        color: $white-color;
+      }
     }
   }
 }

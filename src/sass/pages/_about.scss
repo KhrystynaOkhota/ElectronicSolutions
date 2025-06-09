@@ -280,6 +280,18 @@
   }
 
   &__item {
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border-radius: 100%;
+      background: $white-color;
+      position: absolute;
+      top:20px;
+      left:-40px;
+    }
 
     &:not(&:last-child) {
       margin-bottom: 55px;
