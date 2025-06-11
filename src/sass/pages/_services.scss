@@ -4,14 +4,42 @@
 
 .service {
   display: flex;
-  align-items: flex-start;
+  //align-items: flex-start;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0;
   padding: 30px 0;
   gap: 70px;
+  @media (max-width: $breakpoint-lg) {
+    gap: 15px;
+    flex-direction: column;
+    align-items: self-start;
+  }
+
+  &__content {
+    @media (max-width: $breakpoint-lg) {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 25px;
+    @media (max-width: $breakpoint-lg) {
+      width: calc(100% - 103px);
+      font-size: 20px;
+    }
+  }
 
   &__description {
+    font-size: 20px;
     margin-top: 17px;
+    @media (max-width: $breakpoint-md) {
+      margin-top: 15px;
+      font-size: 16px;
+    }
   }
 
   &__img {
@@ -21,17 +49,66 @@
 
     &-wrap {
       height: 70px;
-      width: 70px;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 70px;
+      -ms-flex: 0 0 70px;
+      flex: 0 0 70px;
+      max-width: 70px;
+      @media (max-width: $breakpoint-lg) {
+        margin-right: 33px;
+      }
     }
   }
 
 }
 
 .s-services {
-  margin-bottom: 100px;
-  & .tab{
-    margin-bottom:30px;
+  &.--home {
+    margin-bottom: 100px;
+
+    & .tab {
+      margin-bottom: 30px;
+
+      &__item {
+
+      }
+    }
+
+    & .btn-transparent {
+      & .btn {
+        &__icon {
+          background: $white-color;
+
+          & i {
+            color: $accent-color;
+          }
+        }
+      }
+    }
   }
+
+  &:not(&.--home) {
+    margin: 44px 0 100px 0;
+    @media (max-width: $breakpoint-xl) {
+      margin: 25px 0 50px 0;
+    }
+
+    & .heading {
+
+      @media (max-width: $breakpoint-lg) {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    }
+
+    & .service {
+      &:first-child {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+      }
+    }
+
+  }
+
 }
 
 .tab {
@@ -51,6 +128,10 @@
     border-radius: 10px;
     cursor: pointer;
     @include transition(.5);
+    @media (max-width: $breakpoint-lg) {
+      width: calc(50% - 25px);
+      text-align: center;
+    }
 
     &.is--active {
       background: #EFF3F1;

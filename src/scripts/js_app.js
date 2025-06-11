@@ -37,7 +37,7 @@ jQuery(function ($) {
                 el: $p.find('.swiper-pagination')[0],
                 clickable: true,
                 renderBullet: function (index, className) {
-                    return '<span class="' + className + '">' + '0' +(index + 1) + "</span>";
+                    return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
 
 
                 },
@@ -184,12 +184,12 @@ jQuery(function ($) {
         _functions.closePopup();
     });
 
-/*(window).scrollTop() > 30 ? r.removeClass("transparent") : r.addClass("transparent")
-            }
-        ));
-    };
-    _functions.coolNav();
-*/
+    /*(window).scrollTop() > 30 ? r.removeClass("transparent") : r.addClass("transparent")
+                }
+            ));
+        };
+        _functions.coolNav();
+    */
 
 
     /* Function on page scroll */
@@ -205,12 +205,10 @@ jQuery(function ($) {
         } else if (winScr <= 10) {
             $('header').removeClass('scrolled');
             prevScroll = 0;
-        };
+        }
+        ;
     };
     _functions.scrollCall();
-
-
-
 
 
 });
@@ -312,7 +310,6 @@ $(document).on("click", ".scroll-to-content", function () {
 });
 
 
-
 // accordion
 $(document).on('click', '.accordion-item', function () {
     const $title = $(this).find('.accordion-title');
@@ -342,7 +339,15 @@ if ($('.select-box').length) {
         search: true,
         searchText: ''
     });
-    $('.extra-select').SumoSelect({ placeholder: '', search: true, searchText: '', okCancelInMulti: true, csvDispCount: 0, nativeOnDevice: [], is_floating: false });
+    $('.extra-select').SumoSelect({
+        placeholder: '',
+        search: true,
+        searchText: '',
+        okCancelInMulti: true,
+        csvDispCount: 0,
+        nativeOnDevice: [],
+        is_floating: false
+    });
     $('.btnOk').text(btnText);
 }
 
@@ -353,31 +358,49 @@ if (".details")
     if ($('.details').length) {
         $('.details').not('.animated').each(function () {
 
-               console.log($(this));
+            console.log($(this));
 
         });
-    };
-
+    }
+;
 
 
 $('.read-more-toggle').on('click', function () {
     var $tp = $(this).parent();
     if ($(this).hasClass('active')) {
-        $tp.find('.read-more-text-wrapper').animate({ 'height': 330 });
-        $('.read-more-text').animate({ height: 0 }, 600).removeClass('active');
+        $tp.find('.read-more-text-wrapper').animate({'height': 330});
+        $('.read-more-text').animate({height: 0}, 600).removeClass('active');
         setTimeout(function () {
             if ($('.portfolio-wrapper').length) {
-                $('html, body').animate({ scrollTop: $('.portfolio-wrapper').offset().top - $('header').outerHeight() }, 700);
+                $('html, body').animate({scrollTop: $('.portfolio-wrapper').offset().top - $('header').outerHeight()}, 700);
             }
             if ($('.read-more-text').length) {
-                $('html, body').animate({ scrollTop: $('.read-more-text').closest('.sect-spacer').offset().top - $('header').outerHeight() - 30 }, 700);
+                $('html, body').animate({scrollTop: $('.read-more-text').closest('.sect-spacer').offset().top - $('header').outerHeight() - 30}, 700);
             }
         }, 700);
     } else {
-        $tp.find('.read-more-text-wrapper').animate({ 'height': $tp.find('.read-more-text-content').height() }, function () {
-            $(this).css({ 'height': 'auto' });
+        $tp.find('.read-more-text-wrapper').animate({'height': $tp.find('.read-more-text-content').height()}, function () {
+            $(this).css({'height': 'auto'});
         });
-        $('.read-more-text').animate({ height: $('.read-more-text-content').height() }, 600).addClass('active');
+        $('.read-more-text').animate({height: $('.read-more-text-content').height()}, 600).addClass('active');
     }
     $(this).toggleClass('active');
+});
+
+
+// Accordion for Footer Links
+
+$(document).on("click", ".footer-info__heading", function () {
+    if ($(this).hasClass("active")) {
+        $(this).removeClass("active").next().slideUp();
+    } else {
+        $(this)
+            .closest(".footer-info__wrap")
+            .find(".footer-info__heading")
+            .not(this)
+            .removeClass("active")
+            .next()
+            .slideUp();
+        $(this).addClass("active").next().slideDown();
+    }
 });

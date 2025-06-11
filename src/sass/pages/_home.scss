@@ -79,7 +79,7 @@
     background: #fff;
 
     &:nth-child(2), &:nth-child(4) {
-      @media (min-width: $breakpoint-md) {
+      @media (min-width: $breakpoint-lg) {
         position: relative;
         top: 52px;
       }
@@ -144,7 +144,7 @@
 
 
 .s-client {
-  padding: 86px 0 108px 0;
+  padding: 0 0 108px 0;
   @media (max-width: $breakpoint-lg) {
     padding: 45px 0 50px 0;
   }
@@ -189,6 +189,10 @@
       background: $white-color;
     }
   }
+
+  &.--decor {
+    border-bottom: 1px solid rgba(227, 227, 227, 1);
+  }
 }
 
 .s-popular-resort {
@@ -203,9 +207,5 @@
   }
 }
 
-.s-recommended-prom {
-  & .btn-transparent {
-    margin-top: 50px;
-  }
-}
+
 

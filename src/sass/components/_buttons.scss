@@ -115,7 +115,16 @@
       }
 
       &__text {
-        color: $white-color;
+        color:$accent-color;
+      }
+    }
+
+    &__white{
+      border-color: $white-color;
+      & .btn {
+        &__text {
+          color:$white-color;
+        }
       }
     }
   }

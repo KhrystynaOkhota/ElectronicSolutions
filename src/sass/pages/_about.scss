@@ -116,12 +116,26 @@
     margin-bottom: 50px;
     border-top: 0;
   }
+
   &.no-line {
     border: none;
   }
 
+  &__row {
+    @media (min-width: $breakpoint-lg) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+
   &__inner {
-    padding: 89px 0;
+    @media (min-width: $breakpoint-xl) {
+      padding: 89px 0;
+    }
+    @media (max-width: $breakpoint-lg) {
+      padding: 25px 0 0 0;
+    }
   }
 
   //padding: 89px 0;
@@ -148,6 +162,10 @@
     &__wrap {
       padding-bottom: 72%;
       min-height: 100%;
+      @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+        //width: 70%;
+        padding-bottom: 45%;
+      }
       @media (min-width: 1405px) {
         width: auto;
         margin-right: calc(-1 * (100vw - 1290px) / 2);
@@ -301,11 +319,11 @@
   &__heading, &__text {
     color: $white-color;
   }
-
+  &__value {
+    padding-right: 10px;
+  }
   &__heading {
-    & .value {
-      padding-right: 10px;
-    }
+
 
     @media (max-width: $breakpoint-md) {
 

@@ -47,6 +47,21 @@
       margin-top: 25px;
     }
   }
+
+  &.--decor {
+    border-bottom: 1px solid rgba(227, 227, 227, 1);
+  }
+}
+
+.s-blog {
+  padding: 44px 0 150px 0;
+
+  & .event-filter {
+    background: $white-color;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    padding: 5px;
+  }
 }
 
 

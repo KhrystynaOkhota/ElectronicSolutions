@@ -7,13 +7,18 @@
 /*------------------------------------------*/
 .popup {
   &-form {
-    &__heading, &__description{
-      color:$white-color;
+    &__heading, &__description {
+      color: $white-color;
     }
-    &__heading {
-      @include fontSize(35, 40);
-      margin-bottom: 15px;
 
+    &__heading {
+      @include fontSize(30, 35);
+      margin-bottom: 18px;
+    }
+
+    &__description {
+      @include fontSize(16, 18);
+      margin-bottom: 25px;
     }
 
     & .btn-primary {
@@ -68,10 +73,10 @@
       position: absolute;
       width: 24px;
       height: 24px;
-      top: 27px;
-      right: 28px;
-
+      top: -50px;
+      right: -21px;
       cursor: pointer;
+      background: red;
 
       & i {
         font-size: 22px;
