@@ -56,14 +56,172 @@
 .s-blog {
   padding: 44px 0 150px 0;
 
+  .arrow {
+    position: absolute;
+    width: 25px;
+    height: 100%;
+    top: 0;
+    font-size: 20px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+    @media (max-width: $breakpoint-lg) {
+      display: block;
+    }
+
+    &.left {
+      // можна додати стилі для лівої кнопки
+      left: -25px;
+    }
+
+    &.right {
+      // можна додати стилі для правої кнопки
+      right: -25px;
+    }
+  }
+
   & .event-filter {
+
     background: $white-color;
     border-radius: 10px;
     margin-bottom: 50px;
     padding: 5px;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    flex: 1;
+
+    // Приховуємо скроллбар
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE 10+
+    @media (max-width: $breakpoint-lg) {
+      border-radius: 0;
+    }
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari, Opera
+    }
+
+    &__wrap {
+      @media (max-width: $breakpoint-lg) {
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        position: relative;
+      }
+    }
+
+    .menu {
+      display: inline-flex;
+
+      .menu-item {
+        flex: 0 0 auto;
+
+        white-space: nowrap;
+        // Додаткові стилі, наприклад:
+        font-weight: 500;
+        color: #000;
+        padding: 7px 20px;
+        border-radius: 10px;
+
+
+        & a {
+          @include fontSize(15, 20);
+          @media (max-width: $breakpoint-lg) {
+            display: inline-block;
+            max-width: 150px;
+          }
+        }
+
+
+        &.selected {
+          background: rgba(239, 243, 241, 1);
+        }
+      }
+    }
   }
 }
 
+/*
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  flex: 1;
+
+  // Приховуємо скроллбар
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE 10+
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Opera
+  }
+
+  .arrow {
+    width: 30px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    z-index: 2;
+
+    &.left {
+      // можна додати стилі для лівої кнопки
+    }
+
+    &.right {
+      // можна додати стилі для правої кнопки
+    }
+  }
+
+  .event-filter {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    flex: 1;
+
+    // Приховуємо скроллбар
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE 10+
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari, Opera
+    }
+
+    .menu {
+      display: inline-flex;
+
+      .menu-item {
+        flex: 0 0 auto;
+        padding: 10px 20px;
+        white-space: nowrap;
+        // Додаткові стилі, наприклад:
+        font-weight: 500;
+        color: #000;
+
+        &.selected {
+          background: #eef1f0;
+          border-radius: 8px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+*/
 
 .blog {
   &__item {

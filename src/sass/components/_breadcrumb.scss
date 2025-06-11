@@ -58,7 +58,7 @@
     &_sep {
 
       & i {
-        font-size: 14px;
+        @include fontSize(12, 14);
         color: rgba(156, 156, 156, 1);
       }
 
