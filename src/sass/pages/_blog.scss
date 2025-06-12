@@ -55,8 +55,11 @@
 
 .s-blog {
   padding: 44px 0 150px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 25px 0 100px 0;
+  }
 
-  .arrow {
+  & .arrow {
     position: absolute;
     width: 25px;
     height: 100%;
@@ -82,146 +85,120 @@
     }
   }
 
-  & .event-filter {
+  & .event {
+    &-filter {
+      background: $white-color;
+      border-radius: 10px;
+      margin-bottom: 50px;
+      padding: 5px;
 
-    background: $white-color;
-    border-radius: 10px;
-    margin-bottom: 50px;
-    padding: 5px;
-
-    display: flex;
-    align-items: center;
-    position: relative;
+      display: flex;
+      align-items: center;
+      position: relative;
 
 
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    flex: 1;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      white-space: nowrap;
+      flex: 1;
 
-    // Приховуємо скроллбар
-    scrollbar-width: none; // Firefox
-    -ms-overflow-style: none; // IE 10+
-    @media (max-width: $breakpoint-lg) {
-      border-radius: 0;
-    }
-
-    &::-webkit-scrollbar {
-      display: none; // Chrome, Safari, Opera
-    }
-
-    &__wrap {
+      // Приховуємо скроллбар
+      scrollbar-width: none; // Firefox
+      -ms-overflow-style: none; // IE 10+
       @media (max-width: $breakpoint-lg) {
-        width: calc(100% - 20px);
-        margin-left: 10px;
-        position: relative;
+        border-radius: 0;
       }
-    }
 
-    .menu {
-      display: inline-flex;
+      &::-webkit-scrollbar {
+        display: none; // Chrome, Safari, Opera
+      }
 
-      .menu-item {
-        flex: 0 0 auto;
+      &__wrap {
+        @media (max-width: $breakpoint-lg) {
+          width: calc(100% - 20px);
+          margin-left: 10px;
+          position: relative;
+        }
+      }
 
-        white-space: nowrap;
-        // Додаткові стилі, наприклад:
-        font-weight: 500;
-        color: #000;
-        padding: 7px 20px;
-        border-radius: 10px;
+      & .menu {
+        display: inline-flex;
+        gap: 40px;
+
+        &-item {
+          flex: 0 0 auto;
+          white-space: nowrap;
+          // Додаткові стилі, наприклад:
+          font-weight: 500;
+          color: #000;
+          padding: 7px 20px;
+          border-radius: 10px;
+
+          & a {
+            @include fontSize(15, 20);
+            @media (max-width: $breakpoint-lg) {
+              display: inline-block;
+              max-width: 150px;
+            }
+          }
 
 
-        & a {
-          @include fontSize(15, 20);
-          @media (max-width: $breakpoint-lg) {
-            display: inline-block;
-            max-width: 150px;
+          &.selected {
+            background: rgba(239, 243, 241, 1);
           }
         }
+      }
+    }
 
+    &__item {
+      position: relative;
 
-        &.selected {
-          background: rgba(239, 243, 241, 1);
+      &:after {
+        @media (max-width: $breakpoint-lg) {
+          content: '';
+          width: 100%;
+          height: 1px;
+          background: rgba(227, 227, 227, 1);
+          position: absolute;
+          bottom: -18px;
         }
       }
     }
   }
-}
 
-/*
-.menu-wrapper {
-  display: flex;
-  align-items: center;
-  position: relative;
+  &__wrap {
+    gap: 35px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
+    padding-bottom: 35px;
 
 
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  white-space: nowrap;
-  flex: 1;
-
-  // Приховуємо скроллбар
-  scrollbar-width: none; // Firefox
-  -ms-overflow-style: none; // IE 10+
-
-  &::-webkit-scrollbar {
-    display: none; // Chrome, Safari, Opera
-  }
-
-  .arrow {
-    width: 30px;
-    height: 40px;
-    font-size: 20px;
-    border: none;
-    background: white;
-    cursor: pointer;
-    z-index: 2;
-
-    &.left {
-      // можна додати стилі для лівої кнопки
+    @media (max-width: $breakpoint-xl) {
+      grid-template-columns: repeat(3, 1fr);
     }
-
-    &.right {
-      // можна додати стилі для правої кнопки
+    @media (max-width: $breakpoint-md) {
+      gap: 30px 15px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $breakpoint-sm) {
+      padding-bottom: 48px;
+      gap: 38px 15px;
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
-  .event-filter {
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    flex: 1;
+  & .btn-show-more {
+    border-color: $accent-color;
+    margin-top: 30px;
 
-    // Приховуємо скроллбар
-    scrollbar-width: none; // Firefox
-    -ms-overflow-style: none; // IE 10+
-
-    &::-webkit-scrollbar {
-      display: none; // Chrome, Safari, Opera
-    }
-
-    .menu {
-      display: inline-flex;
-
-      .menu-item {
-        flex: 0 0 auto;
-        padding: 10px 20px;
-        white-space: nowrap;
-        // Додаткові стилі, наприклад:
-        font-weight: 500;
-        color: #000;
-
-        &.selected {
-          background: #eef1f0;
-          border-radius: 8px;
-          font-weight: 600;
-        }
+    & .btn {
+      &__text {
+        color: $accent-color;
       }
     }
   }
 }
-*/
 
 .blog {
   &__item {
@@ -289,77 +266,6 @@
     }
   }
 
-}
-
-.s-blog {
-
-
-  & .heading {
-
-  }
-
-  & .bnt-transparent {
-    margin-top: 30px;
-  }
-
-  &__wrap {
-    gap: 60px 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    overflow: hidden;
-    padding-bottom: 32px;
-    margin-bottom: 40px;
-    @media (max-width: $breakpoint-xl) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @media (max-width: $breakpoint-md) {
-      gap: 40px 15px;
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 360px) {
-      gap: 40px 15px;
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  & .blog {
-    &__item {
-      position: relative;
-
-      &:nth-child(4n+1) {
-        &:after {
-          content: '';
-          width: 100vw;
-          height: 1px;
-          background: rgba(49, 58, 87, 0.2);
-          position: absolute;
-          bottom: -30px;
-        }
-
-      }
-
-      @media (max-width: $breakpoint-xl) {
-        &:nth-child(4n+1) {
-          &:after {
-            content: '';
-            opacity: 0;
-          }
-
-        }
-        &:nth-child(-3n+7) {
-          &:after {
-            content: '';
-            width: 100vw;
-            height: 1px;
-            background: rgba(49, 58, 87, 0.2);
-            position: absolute;
-            bottom: -30px;
-          }
-        }
-      }
-
-    }
-  }
 }
 
 .s-article {
