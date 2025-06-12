@@ -1,76 +1,6 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-.s-other {
-  @media (max-width: $breakpoint-md) {
-    margin-top: 80px;
-  }
-
-
-  &__content {
-    padding-left: 20px;
-    @media (max-width: $breakpoint-md) {
-      padding-left: 12px;
-    }
-  }
-
-  &__inner {
-    height: 100vh;
-    @media (min-width: $breakpoint-md) {
-      flex-direction: row-reverse;
-
-    }
-    @media (max-width: $breakpoint-md) {
-      height: auto;
-    }
-  }
-
-  & .img {
-    width: 100%;
-    max-width: 380px;
-    @media (max-width: $breakpoint-md) {
-      max-width: 260px;
-    }
-    @media (max-width: 400px) {
-      max-width: 220px;
-    }
-    margin: 0 auto;
-  }
-
-  & .heading {
-    @include fontSize(32, 64);
-    @media (max-width: $breakpoint-md) {
-      margin-bottom: 14px;
-    }
-  }
-
-  & .description {
-    @include fontSize(20, 32);
-    margin-bottom: 31px;
-    @media (max-width: $breakpoint-md) {
-      margin-bottom: 13px;
-    }
-  }
-
-  & .btn-primary {
-    margin: 0 auto;
-  }
-
-  &.thanks {
-    & .heading {
-      margin-bottom: 6px;
-    }
-  }
-
-  &.error {
-    & .heading {
-      margin-bottom: 30px;
-
-    }
-  }
-
-
-}
 
 .s-error, .s-thanks {
   position: relative;
@@ -80,6 +10,12 @@
     object-fit: contain;
     margin: 0 auto;
     display: block;
+    width: 332px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
     @media (max-width: $breakpoint-md) {
       width: 180px;
       height: 70px;
@@ -88,136 +24,109 @@
 
   & .content {
     & .heading, & .description {
-      color: $white-color;
+      color: #111A17;
+    }
+
+    & .heading {
+      margin-bottom: 35px;
+      @include fontSize(35, 50);
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 30px;
+      }
+
+      &__accent {
+        @include fontSize(60, 150);
+        color: $accent-color;
+        margin-bottom: 30px;
+      }
+    }
+
+    & .description {
+      margin-bottom: 45px;
+      @include fontSize(20, 30);
+    }
+
+    & .btn-primary {
+      padding: 15px 64px 15px 20px;
     }
   }
+
+  &__inner {
+    height: 100vh;
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    @media (max-width: $breakpoint-md) {
+      height: auto;
+      padding-top: 170px;
+      text-align: center;
+
+    }
+  }
+
 }
 
 
 .s-thanks {
 
-  padding-top: 86px;
-
-  & .logo__wrap {
-    width: 340px;
-    height: 133px;
-  }
-
-  & .bg {
-    position: absolute;
-    top: 0;
-    lefT: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-  }
-
   & .content {
-
-
-    & .heading {
-      @include fontSize(45, 120);
-      margin-bottom: 43px;
-      @media (max-width: $breakpoint-md) {
-        margin-bottom: 19px;
-      }
-    }
-
     & .description {
-      @include fontSize(20, 30);
-      margin-bottom: 45px;
       @media (max-width: $breakpoint-md) {
         margin-bottom: 20px;
       }
     }
+  }
+  & .img {
+    &__wrap {
 
-    & .btn-primary {
+      @media (max-width: $breakpoint-md) {
+        // max-width: 285px;
+        margin: 80px auto 0 auto;
 
+      }
     }
   }
 }
 
 .s-error {
-  padding-top: 5%;
-
-  &__inner {
-    margin-top: 6%;
-  }
-
-  & .logo__wrap {
-    width: 332px;
-    height: 100px;
-
-  }
 
   & .content {
     & .number {
-      @include fontSize(180, 250);
+      @include fontSize(160, 250);
       line-height: 1;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       color: $accent-color;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 0;
+      }
     }
 
     & .heading, .description {
       color: #111A17;
     }
 
-    & .heading {
-      @include fontSize(35, 50);
-      margin-bottom: 35px;
-      @media (max-width: $breakpoint-md) {
-        margin-bottom: 15px;
-      }
-
-    }
-
     & .description {
-      @include fontSize(25, 30);
-      margin-bottom: 45px;
+
       @media (max-width: $breakpoint-md) {
-        margin-bottom: 20px;
+        margin-bottom: 38px;
       }
     }
 
-    & .btn-primary {
-
-    }
-
-    & .img-404 {
-      width: 75%;
-      max-width: 680px;
-      margin: 0 auto 40px auto;
-      position: relative;
-      z-index: 2;
-    }
   }
 
-  & .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
-    &:nth-child(1) {
-      z-index: 1;
-    }
-
-    &:nth-child(2) {
-      z-index: 3;
-    }
-
-    &:nth-child(2) {
-
-    }
-
+  & .img {
     &__wrap {
-      position: absolute;
-      top: 0;
-      lefT: 0;
-      height: 100%;
-      width: 100%;
+      position: relative;
+      left: -40px;
+      max-width: 480px;
+      margin: 0 auto;
+      @media (max-width: $breakpoint-md) {
+        max-width: 285px;
+        margin: 40px auto 0 auto;
+        left: auto;
+      }
     }
   }
 }

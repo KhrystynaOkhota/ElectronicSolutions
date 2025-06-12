@@ -404,3 +404,21 @@ $(document).on("click", ".footer-info__heading", function () {
         $(this).addClass("active").next().slideDown();
     }
 });
+
+
+
+
+//play & stop Video
+$(document).on('click', '.btn-play', function () {
+    let videoItem = $(this).closest('.video-with-control').find('video').get(0);
+
+    if (videoItem.paused) {
+        videoItem.play();
+        $(this).closest('.video-full').find('video').attr('controls', '');
+        $(this).closest('.btn-play').addClass('hide');
+    } else {
+        videoItem.pause();
+        $(this).closest('.video-full').find('video').removeAttr('controls');
+        $(this).closest('.btn-play').removeClass('hide');
+    }
+});

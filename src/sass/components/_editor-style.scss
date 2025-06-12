@@ -7,9 +7,11 @@
   font-weight: 400;
   line-height: normal;
   color: $primary-color;
+
   & b, & strong {
     font-weight: bold;
   }
+
   & > * {
     &:last-child {
       margin-bottom: 0;
@@ -17,7 +19,7 @@
   }
 
   & p {
-    @include fontSize(17, 20);
+    @include fontSize(16, 20);
     margin-bottom: 20px;
 
     & + ul, & + ol {
@@ -122,12 +124,12 @@
   }
 
   & ul, & ol {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 
     list-style-type: none;
 
     & li {
-      @include fontSize(14, 17);
+      @include fontSize(17, 20);
       line-height: normal;
       position: relative;
 
@@ -157,7 +159,7 @@
 
   & ul {
     list-style: disc;
-    padding-left: 30px;
+    padding-left: 45px;
   }
 
   & ol {
@@ -167,83 +169,25 @@
 
   & blockquote {
     width: 100%;
-    background: #fbf7f3;
-    border-radius: 20px;
-    margin: 84px 0;
-    padding: 35px 30px;
+    background: $white-color;
+    border-radius: 0;
+    padding: 34px 20px;
+    margin-bottom: 30px;
     position: relative;
     @media (max-width: $breakpoint-lg) {
-      padding: 34px 15px;
+      padding: 15px;
       margin: 50px 0;
     }
 
-    & p {
+    & p, & {
       position: relative;
-      font-family: 'Snellroundhand', serif;
-      font-size: 30px;
-      padding-left: 162px;
-      color: #1D9F96;
-      font-style: italic;
-      margin-bottom: 0;
+      font-size: 20px;
+      @include fontSize(16, 20);
       @media (max-width: $breakpoint-lg) {
-        font-size: 20px;
-        padding-left: 60px;
       }
 
       & b, & strong {
         font-weight: bold;
-      }
-
-      &:before {
-        content: '';
-        width: 142px;
-        height: 1px;
-        background: #1D9F96;
-        position: absolute;
-        left: 0;
-        top: 21px;
-        @media (max-width: $breakpoint-lg) {
-          width: 50px;
-          top: 10px;
-        }
-      }
-    }
-
-    &:before, &:after {
-      content: '';
-      width: 104px;
-      height: 55px;
-
-      position: absolute;
-      z-index: 2;
-      @media (max-width: $breakpoint-lg) {
-        width: 66px;
-        height: 35px;
-
-      }
-    }
-
-    &:before {
-      background: url("../img/quote.svg") center center no-repeat;
-      background-size: contain;
-      top: -38px;
-      left: 30px;
-      @media (max-width: $breakpoint-lg) {
-        top: -18px;
-        left: 10px;
-      }
-    }
-
-    &:after {
-      background: url("../img/quote-2.svg") center center no-repeat;
-      background-size: contain;
-
-      bottom: -38px;
-      right: 30px;
-
-      @media (max-width: $breakpoint-lg) {
-        bottom: -18px;
-        right: 10px;
       }
     }
   }

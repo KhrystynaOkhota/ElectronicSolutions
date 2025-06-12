@@ -39,7 +39,6 @@
     & .heading {
       text-align: center;
     }
-
   }
 
   & .btn-transparent {
@@ -200,6 +199,169 @@
   }
 }
 
+.s-post {
+  padding: 44px 0 0 0;
+
+  & .heading {
+    color: rgba(17, 26, 23, 1);
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  & .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &__wrap {
+      padding-bottom: 53%;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  & .date {
+    &__title, &__value {
+      @include fontSize(16, 20);
+    }
+
+    &__title {
+      color: rgba(61, 63, 61, 1);
+    }
+
+    &__value {
+      color: rgba(121, 121, 121, 1);
+    }
+  }
+
+  & .share {
+    @media (max-width: $breakpoint-md) {
+      margin-top: 19px;
+    }
+
+    &__title {
+      color: rgba(61, 63, 61, 1);
+      @include fontSize(16, 20);
+      margin-right: 20px;
+      @media (max-width: $breakpoint-md) {
+        margin-right: 10px;
+
+      }
+
+    }
+
+    & .social {
+      &__item {
+        @include transition(.5);
+
+        width: 40px;
+        height: 40px;
+        color: $white-color;
+        @media (max-width: $breakpoint-md) {
+          width: 30px;
+          height: 30px;
+          & i {
+            font-size: 15px;
+          }
+        }
+
+        &:hover {
+          background: #0B84EE;
+
+          & i {
+            color: $white-color;
+          }
+        }
+
+        &.facebook {
+          background: rgba(11, 132, 238, 1);
+        }
+
+        &.telegram {
+          background: rgba(39, 166, 229, 1);
+        }
+
+        &.viber {
+          background: rgba(124, 80, 154, 1);
+        }
+
+        &:not(&:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  & .line {
+    margin-top: 21px;
+    background: rgba(0, 0, 0, 0.1);
+    height: 1px;
+    width: 100%;
+  }
+}
+
+.s-post-content {
+  padding: 14px 0 100px 0;
+
+
+  .video-full {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 54%;
+    margin-bottom: 40px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 22px;
+    }
+
+    &::before {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .2);
+    }
+
+    & video {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      content-visibility: auto;
+    }
+
+    & .btn-play {
+      position: absolute;
+      bottom: 54px;
+      right: 54px;
+      width: 43px;
+      height: 47px;
+      @media (max-width: $breakpoint-md) {
+        width: 27px;
+        height: 30px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      &.hide {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+/*
 .blog {
   &__item {
     position: relative;
@@ -351,39 +513,6 @@
   }
 }
 
-.share {
-  margin: 36px 0 92px;
-  padding: 30px 0;
-  border: 1px solid rgba(50, 60, 98, 0.2);
-  border-width: 1px 0 1px 0;
-  @media (max-width: $breakpoint-md) {
-    padding: 23px 0;
-    margin: 44px 0;
-  }
 
-  &__title {
-    margin-right: 18px;
-    @media (max-width: $breakpoint-md) {
-      max-width: 50%;
-    }
+*/
 
-  }
-
-  & .social {
-    &__item {
-      @include transition(.5);
-      background: #27A6E5;
-      width: 40px;
-      height: 40px;
-      color: $white-color;
-
-      &:hover {
-        background: #0B84EE;
-
-        & i {
-          color: $white-color;
-        }
-      }
-    }
-  }
-}
