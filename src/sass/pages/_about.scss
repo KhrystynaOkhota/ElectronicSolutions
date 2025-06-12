@@ -170,6 +170,11 @@
         width: auto;
         margin-right: calc(-1 * (100vw - 1290px) / 2);
       }
+
+      @media (max-width: $breakpoint-md) {
+        margin-top:31px;
+        min-height: 240px;
+      }
     }
   }
 
@@ -294,7 +299,10 @@
   &__wrapp {
     padding: 76px 0 76px 70px;
     background: #244235;
-
+    @media (max-width: $breakpoint-md) {
+      padding: 54px 0 44px 64px;
+      margin-bottom: 45px;
+    }
   }
 
   &__item {
