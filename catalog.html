@@ -161,7 +161,7 @@
     <section class="s-catalog">
         <div class="container">
             <div class="row m-row">
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 column">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-16 col-xs-16 column">
                     <div class="fl-menu__wrap">
                         <form id="filter">
                             <div class="fl-menu__top d-flex align-middle align-justify">
@@ -312,8 +312,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div class="fl-menu-item">
                                     <div class="fl-title">
                                         <div class="text-medium">Ціна, грн</div>
@@ -343,55 +341,242 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="fl-menu__bottom">
-                                <a href="" class="btn-primary">Пошук</a>
+                            <div class="fl-menu__bottom d-flex align-middle">
+                                <button class="btn-search">Пошук</button>
                                 <button class="btn-clean ">Очистити</button>
                             </div>
                         </form>
                     </div>
                     <div class="fl-menu__overlay open-filters"></div>
                 </div>
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 column"></div>
-            </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-16 col-xs-16 column">
+                    <div class="swiper-entry category__wrap">
+                        <div class="swiper-container"
+                             data-options='{"loop":false,"slidesPerView": 2,"slidesPerGroup": 2, "spaceBetween": 15,
+                         "breakpoints": {
+
+                        "450": {"slidesPerView":2, "slidesPerGroup": 2},
 
 
-            <div class="row align-center">
-                <div class="col-xl-16 col-lg-16 col-md-16 col-sm-126 col-xs-16">
+                         "991": {"slidesPerView": 3,"slidesPerGroup": 3, "spaceBetween": 15,"loop":false},
+                         "1200": {"slidesPerView": 4,"slidesPerGroup": 4,"loop":true, "spaceBetween": 20}}}'>
 
-                    <nav class="navigation pagination">
-                        <div class="nav-links d-flex">
-                            <a class="start page-numbers">
-                                <img src="assets/img/start.svg" alt="">
-                            </a>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="" class="category">
+                                        <div class="category__img-wrap d-flex align-center align-middle">
+                                            <img src="assets/img/hero-banner.png" alt=""
+                                                 class="category__img">
+                                        </div>
+                                        <div class="category__info">
+                                            <div class="category__title text-center">
+                                                Інвертори гібридні
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" class="category">
+                                        <div class="category__img-wrap d-flex align-center align-middle">
+                                            <img src="assets/img/category-1.jpg" alt=""
+                                                 class="category__img">
+                                        </div>
+                                        <div class="category__info">
+                                            <div class="category__title text-center">
+                                                Інвертори мережеві
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" class="category">
+                                        <div class="category__img-wrap d-flex align-center align-middle">
+                                            <img src="assets/img/category-2.png" alt=""
+                                                 class="category__img">
+                                        </div>
+                                        <div class="category__info">
+                                            <div class="category__title text-center">
+                                                Акумулятори Акумулятори Акумулятори
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" class="category">
+                                        <div class="category__img-wrap d-flex align-center align-middle">
+                                            <img src="assets/img/category-3.png" alt=""
+                                                 class="category__img">
+                                        </div>
+                                        <div class="category__info">
+                                            <div class="category__title text-center">
+                                                Аксесуари
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" class="category">
+                                        <div class="category__img-wrap d-flex align-center align-middle">
+                                            <img src="assets/img/category-4.png" alt=""
+                                                 class="category__img">
+                                        </div>
+                                        <div class="category__info">
+                                            <div class="category__title text-center">
+                                                Інвертори гібридні
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" class="category">
+                                        <div class="category__img-wrap d-flex align-center align-middle">
+                                            <img src="assets/img/category-1.jpg" alt=""
+                                                 class="category__img">
+                                        </div>
+                                        <div class="category__info">
+                                            <div class="category__title text-center">
+                                                Інвертори гібридні
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
 
-                            <a class="prev page-numbers">
-                                <img src="assets/img/prev.svg" alt="">
-                            </a>
-                            <a class="page-numbers">1</a>
-                            <span class="page-numbers current">2</span>
-                            <a class="page-numbers">3</a>
-                            <span class="page-numbers dots">…</span>
-                            <a class="page-numbers">7</a>
-                            <a class="next page-numbers">
-                                <img src="assets/img/next.svg" alt="">
-                            </a>
-
-                            <a class="end page-numbers">
-                                <img src="assets/img/end.svg" alt="">
-                            </a>
+                            <div class="swiper-pagination d-flex d-md-none"></div>
                         </div>
-                    </nav>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-16 col-lg-16 col-md-16 col-sm-126 col-xs-16 d-flex align-center">
+                    </div>
 
-                    <a href="" class="btn btn-transparent  open-popup btn-show-more" data-rel="cta">
-                        <span class="btn__text">Дивитись більше</span>
-                        <span class="btn__icon d-flex align-middle align-center">
+                    <div class="product__wrap">
+
+                        <a href="product-inner.html" class="product">
+                            <div class="product__img-wrap d-flex align-center align-middle">
+                                <img src="assets/img/category-2.png" alt=""
+                                     class="product__img">
+                            </div>
+                            <div class="product__info">
+                                <div class="d-flex align-justify align-middle">
+                                    <div class="product__code">657824</div>
+                                    <div class="product__notification">В наявності</div>
+
+                                </div>
+
+
+                                <div class="product__title">
+                                    Інвертор мережевий SOLIS S5-GC40K (40 кВт, 3 фази, 4 MPPT)
+                                </div>
+                                <div class="product__price text-medium">
+                                    88 560 ₴
+                                </div>
+
+                                <div class="btn btn-primary">
+                                    <span class="btn__text">Детальніше</span>
+                                    <span class="btn__icon d-flex align-middle align-center">
+                                            <i class="icon-arrow-top"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="product-inner.html" class="product">
+                            <div class="product__img-wrap d-flex align-center align-middle">
+                                <img src="assets/img/category-2.png" alt=""
+                                     class="product__img">
+                            </div>
+                            <div class="product__info">
+                                <div class="d-flex align-justify align-middle">
+                                    <div class="product__code">657824</div>
+                                    <div class="product__notification">В наявності</div>
+
+                                </div>
+
+
+                                <div class="product__title">
+                                    Інвертор мережевий SOLIS S5-GC40K (40 кВт, 3 фази, 4 MPPT)
+                                </div>
+                                <div class="product__price text-medium">
+                                    88 560 ₴
+                                </div>
+
+                                <div class="btn btn-primary">
+                                    <span class="btn__text">Детальніше</span>
+                                    <span class="btn__icon d-flex align-middle align-center">
+                                            <i class="icon-arrow-top"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="product-inner.html" class="product">
+                            <div class="product__img-wrap d-flex align-center align-middle">
+                                <img src="assets/img/category-4.png" alt=""
+                                     class="product__img">
+                            </div>
+                            <div class="product__info">
+                                <div class="d-flex align-justify align-middle">
+                                    <div class="product__code">657824</div>
+                                    <div class="product__notification">В наявності</div>
+
+                                </div>
+
+
+                                <div class="product__title">
+                                    Інвертор мережевий SOLIS S5-GC40K (40 кВт, 3 фази, 4 MPPT)
+                                </div>
+                                <div class="product__price text-medium">
+                                    88 560 ₴
+                                </div>
+
+                                <div class="btn btn-primary">
+                                    <span class="btn__text">Детальніше</span>
+                                    <span class="btn__icon d-flex align-middle align-center">
+                                            <i class="icon-arrow-top"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div class="row align-center">
+                        <div class="col-xl-16 col-lg-16 col-md-16 col-sm-126 col-xs-16">
+
+                            <nav class="navigation pagination">
+                                <div class="nav-links d-flex">
+                                    <a class="start page-numbers">
+                                        <img src="assets/img/start.svg" alt="">
+                                    </a>
+
+                                    <a class="prev page-numbers">
+                                        <img src="assets/img/prev.svg" alt="">
+                                    </a>
+                                    <a class="page-numbers">1</a>
+                                    <span class="page-numbers current">2</span>
+                                    <a class="page-numbers">3</a>
+                                    <span class="page-numbers dots">…</span>
+                                    <a class="page-numbers">7</a>
+                                    <a class="next page-numbers">
+                                        <img src="assets/img/next.svg" alt="">
+                                    </a>
+
+                                    <a class="end page-numbers">
+                                        <img src="assets/img/end.svg" alt="">
+                                    </a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-16 col-lg-16 col-md-16 col-sm-126 col-xs-16 d-flex align-center">
+                            <a href="" class="btn btn-transparent  open-popup btn-show-more" data-rel="cta">
+                                <span class="btn__text">Дивитись більше</span>
+                                <span class="btn__icon d-flex align-middle align-center">
                                 <i class="icon-arrow-top"></i>
                             </span>
-                    </a>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -684,8 +869,6 @@
         initializeMap();
     });
 </script>
-
-
 <script>
     jQuery(function ($) {
         const obsCounter = new IntersectionObserver(function (entries, observer) {
@@ -717,7 +900,6 @@
 
 
 </script>
-
 <script>
     const tabs = document.querySelectorAll(".tab");
 
@@ -755,7 +937,6 @@
     tabs.forEach(tabify);
 
 </script>
-
 <script>
     $("#slider").slider({
         range: true,
@@ -835,6 +1016,35 @@
         });
     });
 
+</script>
+<script>
+    function equalizeCategoryTitleHeights() {
+        let maxHeight = 0;
+
+        // Спочатку скинемо попередню висоту
+        jQuery(".s-catalog .category__title").css("min-height", "");
+
+        // Знайдемо найвищий заголовок
+        jQuery(".s-catalog .category__title").each(function () {
+            const height = jQuery(this).outerHeight();
+            if (height > maxHeight) {
+                maxHeight = height;
+            }
+        });
+
+        // Встановимо однакову мінімальну висоту всім заголовкам
+        jQuery(".s-catalog .category__title").css("min-height", maxHeight + "px");
+    }
+
+    // Виконуємо після завантаження DOM
+    jQuery(function () {
+        equalizeCategoryTitleHeights();
+
+        // І при зміні розміру вікна
+        jQuery(window).on("resize", function () {
+            equalizeCategoryTitleHeights();
+        });
+    });
 </script>
 </body>
 </html>

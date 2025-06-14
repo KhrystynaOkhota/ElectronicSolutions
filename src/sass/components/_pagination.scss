@@ -62,7 +62,11 @@
       @include transition(.4);
 
       margin: 0 5px;
-
+      @media (max-width: $breakpoint-md) {
+        width: 25px;
+        height: 25px;
+       margin: 0 2px;
+      }
       & i {
         @include fontSize(12, 14);
       }

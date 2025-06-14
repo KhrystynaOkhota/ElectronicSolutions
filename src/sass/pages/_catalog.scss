@@ -1,6 +1,7 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+
 .s-catalog {
   padding: 44px 0 150px 0;
 
@@ -43,6 +44,10 @@
     }
 
     &-menu {
+      &-item {
+        padding: 12px 0 20px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
 
       &__top {
         &-title {
@@ -52,10 +57,39 @@
         }
       }
 
-      &-item {
-        padding: 12px 0 20px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      &__bottom {
+        padding-top: 20px;
+        @media (max-width: $breakpoint-md) {
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+        }
+
+        & .btn {
+          &-clean, &-search {
+            font-size: 18px;
+            font-family: 'FuturaPT', sans-serif;
+            font-weight: 400;
+            color: rgba(68, 105, 61, 1);
+            cursor: pointer;
+          }
+
+          &-clean {
+            border: none;
+          }
+
+          &-search {
+            border: 1px solid rgba(68, 105, 61, 1);
+            padding: 14px 15px 15px 15px;
+            min-width: 140px;
+            text-align: center;
+            border-radius: 7px;
+            margin-right: 20px;
+          }
+        }
       }
+
     }
   }
 
@@ -71,6 +105,14 @@
 
     & input {
       display: none;
+
+      &:checked {
+        & + span {
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
     }
 
     & span {
@@ -108,7 +150,8 @@
 
       &:after {
         @include fontSize(14, 18);
-        top: calc(50% - 3px);
+        top: calc(50% - 2px);
+        left: 7px;
         color: rgba(146, 192, 84, 1);
         font-weight: 400;
         @media (max-width: $breakpoint-md) {
@@ -118,7 +161,6 @@
       }
     }
   }
-
 
 
   /**/
@@ -201,4 +243,45 @@
     }
   }
 
+
+  & .category {
+    display: block;
+    border-radius: 10px;
+    background: $white-color;
+    padding: 20px 20px 24px 20px;
+
+    &__img {
+      object-fit: contain;
+      object-position: center;
+      height: 100%;
+
+      &-wrap {
+        height: 180px;
+        overflow: hidden;
+        @media (max-width: $breakpoint-md) {
+          height: 124px;
+        }
+      }
+    }
+
+    &__info {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 13px 0;
+    }
+
+    &__title {
+      @include fontSize(18, 22);
+      color: rgba(68, 105, 61, 1);
+
+    }
+
+    &__wrap {
+      margin-bottom: 20px;
+      @media (max-width: $breakpoint-md) {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid rgba(227, 227, 227, 1);
+      }
+    }
+  }
 }
