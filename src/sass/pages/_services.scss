@@ -245,6 +245,44 @@
   }
 }
 
+.s-step {
+  border-bottom:1px solid rgba(227, 227, 227, 1) ;
+  padding-bottom: 100px;
+  @media (max-width: $breakpoint-lg) {
+   padding-bottom: 25px;
+  }
+  .step {
+    text-align: left;
+    &__wrap{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:100px 30px ;
+      @media (max-width: $breakpoint-lg) {
+        grid-template-columns: repeat(1, 1fr);
+        gap:25px ;
+      }
+    }
+    &__icon {
+      &-wrap {
+        width: 81px;
+        height: 81px;
+        border-radius: 100%;
+        border: 1px solid rgba(227, 227, 227, 1);
+        margin-bottom: 12px;
+      }
+    }
+
+    &__heading {
+      @include fontSize(19, 22);
+    }
+
+    &__description {
+      margin-top: 19px;
+      @include fontSize(17, 20);
+    }
+  }
+}
+
 .s-directions-development {
   padding-bottom: 100px;
   border-bottom: 1px solid rgba(227, 227, 227, 1);
