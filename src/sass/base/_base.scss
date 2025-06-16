@@ -189,7 +189,7 @@ img {
     margin-top: 30px;
     gap: 25px;
     @media (max-width: $breakpoint-md) {
-
+      gap: 15px;
     }
 
     &.swiper-pagination-horizontal {
@@ -202,11 +202,13 @@ img {
       height: 5px;
       background: #F8FFFA;
       border-radius: 0;
-
+      @media (max-width: $breakpoint-md) {
+        width: 30px;
+      }
 
       @include transition(.4);
 
-       &-active {
+      &-active {
         background-color: $accent-color;
 
         // transform: scale(1.2);

@@ -246,22 +246,25 @@
 }
 
 .s-step {
-  border-bottom:1px solid rgba(227, 227, 227, 1) ;
+  border-bottom: 1px solid rgba(227, 227, 227, 1);
   padding-bottom: 100px;
   @media (max-width: $breakpoint-lg) {
-   padding-bottom: 25px;
+    padding-bottom: 25px;
   }
+
   .step {
     text-align: left;
-    &__wrap{
+
+    &__wrap {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap:100px 30px ;
+      gap: 100px 30px;
       @media (max-width: $breakpoint-lg) {
         grid-template-columns: repeat(1, 1fr);
-        gap:25px ;
+        gap: 25px;
       }
     }
+
     &__icon {
       &-wrap {
         width: 81px;
@@ -288,7 +291,8 @@
   border-bottom: 1px solid rgba(227, 227, 227, 1);
   margin-bottom: 84px;
   @media (max-width: $breakpoint-lg) {
-    padding: 45px 0 90px 0;
+    padding: 45px 0 50px 0;
+    margin-bottom: 45px;
   }
 
   & .heading {
@@ -303,6 +307,23 @@
     margin-top: 44px;
     @media (max-width: $breakpoint-lg) {
       margin-top: 40px;
+    }
+
+    &__list {
+      @media (max-width: $breakpoint-lg) {
+        gap: 10px;
+      }
+    }
+
+    &__item {
+      @media (max-width: $breakpoint-lg) {
+        font-size: 13px;
+        padding: 7px 8px;
+        width: calc(25% - 10px);
+        display: grid;
+        align-items: center;
+        text-align: center;
+      }
     }
   }
 
@@ -350,6 +371,72 @@
         position: relative;
         padding-bottom: 58%;
       }
+    }
+  }
+}
+
+
+.s-similar-projects {
+  margin-bottom: 100px;
+  @media (max-width: $breakpoint-md) {
+    // margin-bottom: 50px;
+  }
+
+  & .heading {
+    width: calc(100% - 250px);
+    @media (max-width: $breakpoint-md) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  & .project {
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      &-wrap {
+        position: relative;
+        padding-bottom: 70%;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__date {
+      color: rgba(121, 121, 121, 1);
+      font-size: 17px;
+      margin-bottom: 9px;
+    }
+
+    &__title {
+      margin-bottom: 9px;
+      font-size: 20px;
+    }
+
+    &__characteristics {
+      gap: 10px;
+      display: grid;
+
+      & li {
+        & b {
+          font-weight: 600;
+        }
+
+        font-size: 17px;
+        color: rgba(61, 63, 61, 1);
+      }
+    }
+  }
+
+  & .swiper {
+    &-pagination {
+      margin: 45px 0 40px 0;
     }
   }
 }

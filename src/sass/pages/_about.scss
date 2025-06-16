@@ -61,7 +61,8 @@
     padding: 0 19px 19px 19px;
 
     @media (max-width: $breakpoint-md) {
-      width: 350px;
+      width: 100%;
+      max-width: 350px;
       margin: 41px auto 0 auto;
     }
   }
