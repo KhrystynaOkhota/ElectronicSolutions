@@ -192,5 +192,33 @@
     }
   }
 
+  & table {
+    width: 100%;
+    margin: 15px 0;
+
+    & tr {
+      &:nth-child(odd) td {
+        background-color: $white-color;
+      }
+
+      & td {
+        padding: 15px 20px;
+        @include fontSize(16, 20);
+        color: rgba(61, 63, 61, 1);
+        vertical-align: middle;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:nth-child(1) {
+          font-weight: 600;
+          width: 40%;
+          @media (max-width: $breakpoint-md) {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+
 }
 

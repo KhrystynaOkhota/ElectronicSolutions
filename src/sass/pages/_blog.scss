@@ -307,7 +307,9 @@
 
 .s-post-content {
   padding: 14px 0 100px 0;
-
+  @media (max-width: $breakpoint-md) {
+    padding-bottom: 50px;
+  }
 
   .video-full {
     position: relative;

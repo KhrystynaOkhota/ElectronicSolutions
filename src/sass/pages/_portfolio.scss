@@ -210,6 +210,63 @@
 
 }
 
+.s-portfolio-detail {
+  & p{
+    font-size: 20px;
+    font-size: -webkit-calc(16px + (20 - 16) * ((100vw - 300px) / (1920 - 300)));
+    font-size: -moz-calc(16px + (20 - 16) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1920 - 300)));
+
+  }
+  .add-info {
+    @media (max-width: $breakpoint-md) {
+      display: flex;
+    }
+    & .icon {
+      margin-bottom: 12px;
+      width: 45px;
+      @media (max-width: $breakpoint-md) {
+
+        margin: 0 17px 0 0
+      }
+    }
+
+    & .label, & .value {
+      font-size: 20px;
+      @include fontSize(16, 20);
+
+    }
+
+    & .label {
+      margin-bottom: 7px;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 5px;
+      }
+    }
+
+    & .value {
+      font-weight: 600;
+    }
+
+    &__wrap {
+      padding: 45px 0;
+      display: grid;
+      grid-template-columns: minmax(142px, auto) minmax(142px, auto) minmax(142px, auto) minmax(142px, auto) minmax(142px, auto);
+      gap: 50px;
+      justify-content: flex-start;
+      @media (max-width: $breakpoint-xl) {
+        grid-template-columns: minmax(142px, auto) minmax(142px, auto) minmax(142px, auto);
+        gap: 15px;
+      }
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+
+        padding: 30px 0;
+      }
+
+    }
+  }
+}
 
 .gallery {
   &__wrap {
@@ -224,6 +281,14 @@
 
     &-wrap {
       height: 275px;
+    }
+  }
+}
+
+.s-cta{
+  &+ .s-similar-projects{
+    @media (max-width: $breakpoint-md) {
+      margin-top: 50px;
     }
   }
 }
