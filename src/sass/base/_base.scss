@@ -92,7 +92,7 @@ img {
   z-index: 3;
 }
 
-body {
+body, html {
   &.overflow-hidden {
     // padding-left: calc(100vw - 100%);
     overflow: hidden;

@@ -162,7 +162,11 @@
         <div class="container">
             <div class="row m-row">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-16 col-xs-16 column">
+
                     <div class="fl-menu__wrap">
+
+                        <div class="fl-menu__close"><i class="icon-close"></i></div>
+
                         <form id="filter">
                             <div class="fl-menu__top d-flex align-middle align-justify">
                                 <div class="fl-menu__top-title heading-font">Фільтр</div>
@@ -329,12 +333,12 @@
                                                 <label class="range__label">
                                                     <input class="input from" name="" type="text" value="8"
                                                            placeholder="">
-                                                    <span>Від</span>
+
                                                 </label>
                                                 <label class="range__label">
                                                     <input class="input to" name="" type="text" placeholder=""
                                                            value="6666">
-                                                    <span>До</span>
+
                                                 </label>
                                             </div>
                                         </div>
@@ -347,9 +351,11 @@
                             </div>
                         </form>
                     </div>
-                    <div class="fl-menu__overlay open-filters"></div>
+                    <div class="fl-menu__overlay"></div>
                 </div>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-16 col-xs-16 column">
+                    <h1 class="heading heading-font text-regular h3">Обладнання</h1>
+
                     <div class="swiper-entry category__wrap">
                         <div class="swiper-container"
                              data-options='{"loop":false,"slidesPerView": 2,"slidesPerGroup": 2, "spaceBetween": 15,
@@ -446,12 +452,17 @@
                         </div>
                     </div>
 
+                    <div class="s-catalog__control d-flex align-justify align-middle">
+                        <div class="btn-filter">
+                            Фільтр
+                        </div>
+                        <div class="btn-view__wrap d-flex align-middle align-right">
+                            <button data-view="list" class="btn-view"><i class="icon-list"></i></button>
+                            <button data-view="grid" class="btn-view active"><i class="icon-grid"></i></button>
 
-                    <div class="view-switch">
-                        <button data-view="list" class="view-btn">list</button>
-                        <button data-view="grid" class="view-btn active">grid</button>
-
+                        </div>
                     </div>
+
 
                     <div class="product__wrap-grid" id="itemsContainer">
 
@@ -461,9 +472,9 @@
                                      class="product__img">
                             </div>
                             <div class="product__info">
-                                <div class="d-flex align-justify align-middle">
+                                <div class="d-flex align-justify align-middle additional-information">
                                     <div class="product__code">657824</div>
-                                    <div class="product__notification">В наявності</div>
+                                    <div class="product__notification"><i class="icon-checkmark"></i> В наявності</div>
 
                                 </div>
 
@@ -1057,7 +1068,7 @@
 
 <script>
     const container = document.getElementById('itemsContainer');
-    const viewButtons = document.querySelectorAll('.view-btn');
+    const viewButtons = document.querySelectorAll('.btn-view');
 
     viewButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -1068,7 +1079,7 @@
             container.classList.add(`product__wrap-${view}`);
 
             // Зберігаємо у localStorage
-           // localStorage.setItem('preferredView', view);
+            // localStorage.setItem('preferredView', view);
 
             // Активна кнопка
             viewButtons.forEach(btn => btn.classList.remove('active'));
@@ -1077,16 +1088,37 @@
     });
 
     // Встановити попередній вигляд з localStorage
-   /* window.addEventListener('load', () => {
-        const savedView = localStorage.getItem('preferredView') || 'grid';
-        container.classList.add(`product__wrap-${savedView}`);
+    /* window.addEventListener('load', () => {
+         const savedView = localStorage.getItem('preferredView') || 'grid';
+         container.classList.add(`product__wrap-${savedView}`);
 
-        viewButtons.forEach(btn => {
-            if (btn.getAttribute('data-view') === savedView) {
-                btn.classList.add('active');
-            }
-        });
-    });*/
+         viewButtons.forEach(btn => {
+             if (btn.getAttribute('data-view') === savedView) {
+                 btn.classList.add('active');
+             }
+         });
+     });*/
+</script>
+
+
+<script>
+
+    //open filters on mobile
+    $(document).on("click", ".btn-filter", function () {
+        $("body,html").toggleClass("overflow-hidden");
+        $(this).toggleClass("is-open");
+        $(".fl-menu__wrap").toggleClass("is-open");
+        $(".fl-menu__overlay").toggleClass("is-active");
+    });
+    $(document).on("click", ".fl-menu__overlay, .fl-menu__close", function () {
+        $(this).hasClass("is-active")
+            ? $(this).removeClass("is-active")
+            : $(this).addClass("is-active");
+
+        $(".fl-menu__wrap").removeClass("is-open"),
+            $("body,html").toggleClass("overflow-hidden");
+
+    });
 </script>
 </body>
 </html>
