@@ -446,7 +446,14 @@
                         </div>
                     </div>
 
-                    <div class="product__wrap">
+
+                    <div class="view-switch">
+                        <button data-view="list" class="view-btn">list</button>
+                        <button data-view="grid" class="view-btn active">grid</button>
+
+                    </div>
+
+                    <div class="product__wrap-grid" id="itemsContainer">
 
                         <a href="product-inner.html" class="product">
                             <div class="product__img-wrap d-flex align-center align-middle">
@@ -1045,6 +1052,41 @@
             equalizeCategoryTitleHeights();
         });
     });
+</script>
+
+
+<script>
+    const container = document.getElementById('itemsContainer');
+    const viewButtons = document.querySelectorAll('.view-btn');
+
+    viewButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const view = button.getAttribute('data-view');
+
+            // Очищення всіх класів виду
+            container.className = '';
+            container.classList.add(`product__wrap-${view}`);
+
+            // Зберігаємо у localStorage
+           // localStorage.setItem('preferredView', view);
+
+            // Активна кнопка
+            viewButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        });
+    });
+
+    // Встановити попередній вигляд з localStorage
+   /* window.addEventListener('load', () => {
+        const savedView = localStorage.getItem('preferredView') || 'grid';
+        container.classList.add(`product__wrap-${savedView}`);
+
+        viewButtons.forEach(btn => {
+            if (btn.getAttribute('data-view') === savedView) {
+                btn.classList.add('active');
+            }
+        });
+    });*/
 </script>
 </body>
 </html>
