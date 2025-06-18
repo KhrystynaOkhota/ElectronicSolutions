@@ -254,14 +254,192 @@
 
   .step {
     text-align: left;
+    position: relative;
+    @media (min-width: $breakpoint-lg) {
+      & .arrow-decor {
+        height: 2px;
+        background: rgba(217, 217, 217, 1);
+
+        background: #d9d9d9;
+        width: calc(100% - 98px);
+        position: absolute;
+        left: 108px;
+        top: 40px;
+
+        &:before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+          background: rgba(217, 217, 217, 1);
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &:after {
+          content: '';
+          width: 33px;
+          height: 16px;
+          background: url(../img/ar-step.svg) no-repeat;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      &:nth-child(3) {
+        &:after {
+          content: '';
+          width: 2px;
+          height: calc(100% + 100px);
+          background: rgba(217, 217, 217, 1);
+          position: absolute;
+          right: -10px;
+          top: 40px;
+        }
+      }
+
+      &:nth-child(4) {
+        order: 6;
+
+        & .arrow-decor {
+          &:before {
+            content: '';
+
+            opacity: 0;
+
+          }
+        }
+
+        &:after {
+          content: '';
+
+        }
+      }
+
+      &:nth-child(5) {
+        order: 5;
+      }
+
+      &:nth-child(6) {
+        order: 4;
+      }
+
+      &:nth-child(1), &:nth-child(2) {
+        & .arrow-decor {
+
+          &:after {
+            content: '';
+            left: auto;
+            right: 0;
+            transform: translateY(-50%) rotate(180deg);
+          }
+        }
+      }
+      &:nth-child(3) {
+        & .arrow-decor {
+
+          &:after {
+            content: '';
+            display: none;
+          }
+        }
+      }
+      &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+        & .arrow-decor {
+          &:before {
+            content: '';
+            left: auto;
+            right: 0;
+          }
+
+          &:after {
+            content: '';
+            right: auto;
+            left: 0;
+          }
+        }
+      }
+    }
+    @media (max-width: $breakpoint-md) {
+      &:not(&:last-child) {
+        &:after {
+          content: '';
+          width: 1px;
+          background: #d9d9d9;
+
+          height: calc(100% + 25px);
+          position: absolute;
+          top: 40px;
+          left: -15px;
+        }
+      }
+
+
+      & .arrow-decor {
+        height: 1px;
+        background: rgba(217, 217, 217, 1);
+        width: 14px;
+        position: absolute;
+        left: -16px;
+        top: 40px;
+z-index: 4;
+        &:before {
+          content: '';
+          width: 5px;
+          height: 5px;
+          border-radius: 100%;
+          background: rgba(217, 217, 217, 1);
+          position: absolute;
+          left: -1px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &:after {
+          content: '';
+          width: 9px;
+          height: 8px;
+          background: url(../img/ar-step-mobile.svg) no-repeat center;
+          background-size: contain;
+          position: absolute;
+          right: -3px;
+          top: 50%;
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      &:first-child {
+        & .arrow-decor {
+          left: -13px;
+
+          &:before {
+            left: auto;
+            right: -2px;
+          }
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
 
     &__wrap {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 100px 30px;
+      gap: 100px 40px;
       @media (max-width: $breakpoint-lg) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+      }
+      @media (max-width: $breakpoint-md) {
         grid-template-columns: repeat(1, 1fr);
         gap: 25px;
+        padding-left: 10px;
       }
     }
 
@@ -272,6 +450,8 @@
         border-radius: 100%;
         border: 1px solid rgba(227, 227, 227, 1);
         margin-bottom: 12px;
+
+
       }
     }
 
@@ -283,7 +463,21 @@
       margin-top: 19px;
       @include fontSize(17, 20);
     }
+
+    &:nth-child(6) {
+      & .step {
+        &__icon {
+          filter: brightness(0) invert(1);;
+
+          &-wrap {
+            background: $accent-color;
+            border-color: $accent-color;
+          }
+        }
+      }
+    }
   }
+
 }
 
 .s-directions-development {
