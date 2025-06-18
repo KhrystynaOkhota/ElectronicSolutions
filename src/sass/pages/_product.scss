@@ -73,6 +73,22 @@
     padding: 25px 0 50px 0;
   }
 
+  a.btn-zoom {
+
+    height: 45px;
+    width: 45px;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 4;
+
+    & i {
+      font-size: 22px;
+      color: rgba(156, 156, 156, 1);
+    }
+  }
+
   & .product {
     &__name {
       margin-bottom: 50px;
@@ -163,7 +179,7 @@
     &-button {
       &-prev, &-next {
         position: absolute;
-        background: #fff;
+        background: transparent;
         border-radius: 0;
         top: 50%;
         transform: translateY(-50%);
@@ -247,6 +263,8 @@
       }
     }
   }
+
+
 }
 
 .s-similar-products {

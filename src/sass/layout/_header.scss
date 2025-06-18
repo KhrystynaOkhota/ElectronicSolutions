@@ -284,6 +284,9 @@
       height: 71px;
       transform: scale(1);
       transition: transform ease-out .5s;
+      @media (min-width: 1400px) {
+        width: 223px;
+      }
       @media (max-width: $breakpoint-xl) {
         width: 130px;
         height: auto;

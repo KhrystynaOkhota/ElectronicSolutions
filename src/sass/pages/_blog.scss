@@ -122,22 +122,21 @@
 
       & .menu {
         display: inline-flex;
-        gap: 40px;
+        gap: 41px;
 
         &-item {
           flex: 0 0 auto;
           white-space: nowrap;
-          // Додаткові стилі, наприклад:
-          font-weight: 500;
-          color: #000;
           padding: 7px 20px;
           border-radius: 10px;
 
           & a {
-            @include fontSize(15, 20);
+            color: rgba(61, 63, 61, 1);
+            font-size: 20px;
             @media (max-width: $breakpoint-lg) {
               display: inline-block;
               max-width: 150px;
+              font-size: 15px;
             }
           }
 
@@ -166,7 +165,7 @@
   }
 
   &__wrap {
-    gap: 35px 20px;
+    gap: 42px 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     overflow: hidden;
