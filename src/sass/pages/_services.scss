@@ -386,7 +386,8 @@
         position: absolute;
         left: -16px;
         top: 40px;
-z-index: 4;
+        z-index: 4;
+
         &:before {
           content: '';
           width: 5px;
@@ -581,6 +582,16 @@ z-index: 4;
     @media (max-width: $breakpoint-md) {
       text-align: center;
       width: 100%;
+    }
+  }
+
+  & .btn-transparent {
+    & .btn__icon {
+      background: $white-color;
+
+      & i {
+        color: $accent-color;
+      }
     }
   }
 

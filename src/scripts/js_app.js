@@ -197,17 +197,15 @@ jQuery(function ($) {
         _functions.scrollCall();
     });
 
-    var prevScroll = 0;
+
     _functions.scrollCall = function () {
         winScr = $(window).scrollTop();
-        if (winScr > prevScroll) {
+        if (winScr > 10) {
             $('header').addClass('scrolled');
-        } else if (winScr <= 10) {
+        } else {
             $('header').removeClass('scrolled');
-            prevScroll = 0;
         }
-        ;
-    };
+    }
     _functions.scrollCall();
 
 

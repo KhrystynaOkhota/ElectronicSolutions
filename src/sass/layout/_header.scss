@@ -8,14 +8,12 @@
   width: 100%;
 
   position: fixed;
-  background: $white-color;
+  background: rgba(37, 54, 65, 0.5);
   z-index: 7;
   visibility: visible;
   opacity: 1;
-  -webkit-transition: 0.25s linear;
-  -o-transition: 0.25s linear;
-  transition: 0.25s linear;
-  height: var(--h-height);
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
   @media (max-width: $breakpoint-lg) {
     padding: 18px 0;
     background: rgba(36, 66, 53, 1);
@@ -24,13 +22,12 @@
     height: auto;
   }
 
-  &.transparent {
-    //  background: transparent;
-
-
-    &.scrolled {
-      //background: $white-color;
-
+  &:not(&.bg) {
+    @media (max-width: $breakpoint-lg) {
+      background: rgba(37, 54, 65, 0.5);
+      &.open-menu {
+        background: #1f3133;
+      }
     }
 
   }
@@ -73,7 +70,7 @@
 
   &__main {
     transition: all ease-out .5s;
-    padding: 20px 0;
+    padding: 12px 0;
     @media (max-width: $breakpoint-lg) {
       order: 2;
 
@@ -129,12 +126,13 @@
 
 
     & .btn-transparent {
-      @media (max-width: $breakpoint-lg) {
-        border-color: $white-color;
-        & .btn__text {
-          color: $white-color;
-        }
+
+      border-color: $white-color;
+
+      & .btn__text {
+        color: $white-color;
       }
+
     }
 
     & .contact {
@@ -142,7 +140,7 @@
         & a, & li, &__title {
           font-size: 18px;
           font-weight: 400;
-          color: rgba(17, 26, 23, 1);
+          color: $white-color;
 
           @media (max-width: $breakpoint-xl) {
             font-size: 16px;
@@ -297,6 +295,7 @@
       }
     }
   }
+
   & .burger {
     display: flex;
     cursor: pointer;
@@ -392,7 +391,47 @@
     }
   }
 
+  &.bg, &.scrolled {
+    @media (min-width: $breakpoint-lg) {
+      background: $white-color;
 
+      & .header__main {
+        & .contact-links {
+          & a, & li, &__title {
+            color: rgba(17, 26, 23, 1);
+          }
+        }
+
+
+        & .menu-item {
+          & a {
+            color: red;
+          }
+        }
+      }
+
+      & .btn {
+        &-transparent {
+          background: transparent;
+          border-color: $accent-color;
+
+          & .btn {
+            &__icon {
+              background: $accent-color;
+
+              & i {
+                color: $white-color;
+              }
+            }
+
+            &__text {
+              color: $accent-color;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 

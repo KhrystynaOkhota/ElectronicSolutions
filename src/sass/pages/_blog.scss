@@ -42,6 +42,14 @@
   }
 
   & .btn-transparent {
+    & .btn__icon {
+      background: $white-color;
+
+      & i {
+        color: $accent-color;
+      }
+    }
+
     @media (max-width: $breakpoint-lg) {
       margin-top: 25px;
     }
