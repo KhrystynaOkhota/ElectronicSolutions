@@ -23,6 +23,18 @@
   }
 
   &:not(&.bg) {
+
+    & .logo {
+      &.black {
+        display: none;
+      }
+
+      &.light {
+        display: block;
+      }
+
+    }
+
     @media (max-width: $breakpoint-lg) {
       background: rgba(37, 54, 65, 0.5);
       &.open-menu {
@@ -392,6 +404,18 @@
   }
 
   &.bg, &.scrolled {
+
+    & .logo {
+      &.black {
+        display: block;
+      }
+
+      &.light {
+        display: none;
+      }
+
+    }
+
     @media (min-width: $breakpoint-lg) {
       background: $white-color;
 
