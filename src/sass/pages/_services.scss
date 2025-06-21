@@ -65,7 +65,9 @@
 .s-services {
   &.--home {
     margin-bottom: 100px;
-
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 50px;
+    }
     & .tab {
       margin-bottom: 30px;
 
@@ -83,6 +85,11 @@
             color: $accent-color;
           }
         }
+      }
+    }
+    & + .s-about .img__wrap{
+      @media (max-width: $breakpoint-lg) {
+        margin-top: 0;
       }
     }
   }

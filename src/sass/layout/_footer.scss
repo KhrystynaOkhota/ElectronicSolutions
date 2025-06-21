@@ -78,11 +78,11 @@
       }
 
       &__link {
-        color: $accent-color;
+        color: $white-color;
         @include transition(.5);
 
         &:hover {
-          color: $white-color;
+          color: $accent-color;
         }
       }
     }
@@ -207,7 +207,7 @@
   & .btn-transparent {
     display: block;
     max-width: max-content;
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
       margin: 0 auto;
     }
 
@@ -216,7 +216,7 @@
     }
 
     &__wrap {
-      @media (max-width: $breakpoint-md) {
+      @media (max-width: $breakpoint-lg) {
         margin: 0 auto 31px auto;
       }
     }

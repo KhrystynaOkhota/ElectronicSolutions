@@ -73,6 +73,15 @@
     padding: 25px 0 50px 0;
   }
 
+  &__row {
+    @media (max-width: $breakpoint-lg) {
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  }
+
   a.btn-zoom {
 
     height: 45px;
@@ -92,9 +101,10 @@
   & .product {
     &__name {
       margin-bottom: 50px;
-      @include fontSize(35, 40);
+      font-size: 40px;
       @media (max-width: $breakpoint-lg) {
         margin-bottom: 20px;
+        font-size: 35px;
       }
     }
 
@@ -205,7 +215,7 @@
 .s-product-detail {
   padding: 0 0 100px 0;
   @media (max-width: $breakpoint-lg) {
-    padding-bottom: 50px;
+    padding-bottom: 45px;
   }
 
   & .table {
@@ -219,7 +229,7 @@
     &__wrap {
       & table {
         width: 100%;
-        margin: 15px 0;
+        margin: 15px 0 0 0;
 
         & tr {
           &:nth-child(odd) td {
@@ -233,6 +243,10 @@
             vertical-align: middle;
             overflow: hidden;
             text-overflow: ellipsis;
+            @media (max-width: $breakpoint-lg) {
+              padding: 13px 15px;
+              font-size: 16px;
+            }
 
             &:nth-child(1) {
               font-weight: 600;
@@ -256,7 +270,7 @@
     }
 
     &__item {
-      @media (max-width: $breakpoint-md) {
+      @media (max-width: $breakpoint-xl) {
         width: auto;
         padding: 7px 11px;
         font-size: 16px;
@@ -273,6 +287,13 @@
     margin-bottom: 100px;
   }
 
+  & .btn-primary {
+    min-width: auto;
+    width: 100%;
+    max-width: 223px;
+
+  }
+
   & .product {
     &__img {
       &-wrap {
@@ -280,6 +301,10 @@
         margin-bottom: 15px;
         border-radius: 10px;
         background: $white-color;
+        @media (max-width: $breakpoint-lg) {
+          height: 230px;
+          max-width: 300px;
+        }
       }
     }
   }
