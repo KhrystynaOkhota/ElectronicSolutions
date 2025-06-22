@@ -95,11 +95,8 @@
 
     object-fit: contain;
     object-position: center;
-    @media (max-width: $breakpoint-md) {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 15px;
-    }
+    width: 50%;
+    height: 50%;
   }
 }
 
@@ -173,7 +170,7 @@
       }
 
       @media (max-width: $breakpoint-md) {
-        margin-top:31px;
+        margin-top: 31px;
         min-height: 240px;
       }
     }
@@ -328,9 +325,11 @@
   &__heading, &__text {
     color: $white-color;
   }
+
   &__value {
     padding-right: 10px;
   }
+
   &__heading {
 
 
@@ -388,7 +387,7 @@
       position: relative;
       z-index: 1;
       min-width: 250px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
       text-align: left;
 
       h3 {

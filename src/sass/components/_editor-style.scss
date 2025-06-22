@@ -145,15 +145,15 @@
         color: $accent-color;
       }
 
-      &::before {
-        content: "";
+      /*&::before {
+        // content: "";
         width: 4px;
         height: 4px;
         border-radius: 100%;
         position: absolute;
         top: 50%;
         left: 10px;
-      }
+      }*/
     }
   }
 
@@ -220,5 +220,35 @@
     }
   }
 
+  &.main-points {
+    & h2 {
+      font-size: 35px;
+      @media (max-width: $breakpoint-md) {
+        font-size: 25px;
+      }
+    }
+
+    & ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        position: relative;
+        padding-left: 40px;
+
+        &:before {
+
+          content: '\e908';
+          font-size: 15px;
+          font-family: 'icomoon' !important;
+          left: 6px;
+          top: 6px;
+          position: absolute;
+          color: rgba(68, 105, 61, 1);
+
+        }
+      }
+    }
+  }
 }
 
