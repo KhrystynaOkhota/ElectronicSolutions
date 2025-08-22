@@ -13,7 +13,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/css/app.css"/>
@@ -150,16 +150,46 @@
 <main class="main ">
 
     <section class="s-hero">
-        <div class="s-hero__bg">
+        <!-- для того щоб на телефоні показувалась картинка треба  тут  додати  show а  video__wrap додати  hide  якщо не додавати нічого буде відео відображатись-->
+        <div class="s-hero__bg ">
             <img class="bg" src="assets/img/hero-banner.png" alt="image">
         </div>
+
+
+        <div class="video__wrap ">
+
+            <!--  large video   -->
+            <video class="video video-large" autoplay muted loop>
+                <source src="./assets/img/t.mp4"
+                        type="video/mp4">
+                <source src="" type="video/webm">
+                <source src="" type="video/ogv">
+            </video>
+
+            <!--  small video -->
+
+            <video class="video video-small" autoplay muted loop>
+                <source src="./assets/img/t.mp4"
+                        type="video/mp4">
+                <source src="" type="video/webm">
+                <source src="" type="video/ogv">
+            </video>
+
+            <div class="preload d-flex align-center align-middle">
+                <img src="./assets/img/p-1.png" class="preload__img" alt="">
+                <div class="preload__btn btn-play">
+                </div>
+            </div>
+        </div>
+
+
         <div class="container overlap">
             <div class="s-hero__content  text-left">
                 <div class="heading h1 heading-font text-bold">
-                    Зелена енергетика в кожний дім та підприемство
+                    Зелена енергетика в кожний діїім та підприемство
                 </div>
 
-                <div class="description text-light">Зробимо незалежних українців більш незалежними!</div>
+                <div class="description text-light">Зробимо незалежних українціїів більш незалежними!</div>
 
 
                 <a href="" class="btn btn-white open-popup" data-rel="consultation">
@@ -279,6 +309,34 @@
                                 <div class="d-flex align-left align-middle">
                                     <div class="card__number heading-font">
                                         04.
+                                    </div>
+                                    <div class="card__title text-semibold text-s">
+                                        Клієнтська підтримка
+                                    </div>
+                                </div>
+                                <div class="card__description text-s">
+                                    Професійна та дружня підтримку на всіх етапах співпраці, від консультацій до
+                                    встановлення.
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="d-flex align-left align-middle">
+                                    <div class="card__number heading-font">
+                                        03.
+                                    </div>
+                                    <div class="card__title text-semibold text-s">
+                                        Надійність та якість
+                                    </div>
+                                </div>
+                                <div class="card__description text-s">
+                                    Високоякісне обладнання та матеріали, а також гарантія на свої продукти та послуги.
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="d-flex align-left align-middle">
+                                    <div class="card__number heading-font">
+                                        06.
                                     </div>
                                     <div class="card__title text-semibold text-s">
                                         Клієнтська підтримка
